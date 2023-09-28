@@ -1,0 +1,449 @@
+… # emerge --pretend --verbose --update --deep --newuse --changed-slot=y --with-bdeps=y virtual/pandoc 2>&1 | tee -a "${THIS_FILE}"
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies  .... ...... .... done!
+Dependency resolution took 58.26 s.
+
+[ebuild     UD ] dev-haskell/lua-2.2.0:0/2.2.0::gentoo [2.3.1:0/2.3.1::haskell] USE="-doc -hscolour -profile -system-lua -test (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/base-compat-0.12.1:0/0.12.1::gentoo [0.13.0:0/0.13.0::haskell] USE="-doc -hscolour -profile (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/jira-wiki-markup-1.4.0:0/1.4.0::gentoo [1.5.1:0/1.5.1::haskell] USE="-doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild  N     ] dev-haskell/exceptions-0.10.4-r3:0/0.10.4::haskell  USE="-doc -hoogle -hscolour -profile" 0 KiB
+[ebuild  N     ] dev-haskell/hsyaml-0.2.1.1:0/0.2.1.1::haskell  USE="-doc -exe -hoogle -hscolour -profile -test" 0 KiB
+[ebuild     UD ] dev-haskell/hslua-core-2.2.0:0/2.2.0::gentoo [2.3.1:0/2.3.1::haskell] USE="-doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/hslua-marshalling-2.2.0:0/2.2.0::gentoo [2.3.0:0/2.3.0::haskell] USE="-doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/onetuple-0.3.1:0/0.3.1::gentoo [0.4.1.1:0/0.4.1.1::haskell] USE="-doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/hslua-objectorientation-2.2.0:0/2.2.0::gentoo [2.3.0:0/2.3.0::haskell] USE="-doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/base-compat-batteries-0.12.1:0/0.12.1::gentoo [0.13.0:0/0.13.0::haskell] USE="-doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/hslua-classes-2.2.0:0/2.2.0::gentoo [2.3.0:0/2.3.0::haskell] USE="-doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/hslua-packaging-2.2.0:0/2.2.0::gentoo [2.3.0:0/2.3.0::haskell] USE="-doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/assoc-1.0.2:0/1.0.2::gentoo [1.1:0/1.1::haskell] USE="-doc -hscolour -profile (-hoogle%) (-tagged%*)" 0 KiB
+[ebuild     UD ] dev-haskell/these-1.1.1.1:0/1.1.1.1::gentoo [1.2:0/1.2::haskell] USE="-doc -hscolour -profile (-hoogle%)" 0 KiB
+[ebuild  N     ] dev-haskell/x509-1.7.7:0/1.7.7::haskell  USE="-doc -hoogle -hscolour -profile -test" 0 KiB
+[ebuild     UD ] dev-haskell/hslua-module-path-1.0.2:0/1.0.2::gentoo [1.1.0:0/1.1.0::haskell] USE="-doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/hslua-module-system-1.0.2:0/1.0.2::gentoo [1.1.0.1:0/1.1.0.1::haskell] USE="-doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/hslua-module-text-1.0.2:0/1.0.2::gentoo [1.1.0.1:0/1.1.0.1::haskell] USE="-doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/hslua-module-version-1.0.2:0/1.0.2::gentoo [1.1.0:0/1.1.0::haskell] USE="-doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild  N     ] dev-haskell/x509-store-1.6.9:0/1.6.9::haskell  USE="-doc -hoogle -hscolour -profile -test" 0 KiB
+[ebuild     UD ] dev-haskell/semialign-1.2.0.1:0/1.2.0.1::gentoo [1.3:0/1.3::haskell] USE="-doc -hscolour -profile (-hoogle%) (-semigroupoids%*)" 0 KiB
+[ebuild     UD ] dev-haskell/strict-0.4.0.1:0/0.4.0.1::gentoo [0.5:0/0.5::haskell] USE="-doc -hscolour -profile (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/aeson-2.0.3.0:0/2.0.3.0::gentoo [2.1.2.1:0/2.1.2.1::haskell] USE="ordered-keymap -cffi -doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild  N     ] dev-haskell/x509-system-1.6.7:0/1.6.7::haskell  USE="-doc -hoogle -hscolour -profile" 0 KiB
+[ebuild  N     ] dev-haskell/x509-validation-1.6.12:0/1.6.12::haskell  USE="-doc -hoogle -hscolour -profile -test" 0 KiB
+[ebuild     UD ] dev-haskell/pandoc-types-1.22.2:0/1.22.2::gentoo [1.23.1:0/1.23.1::haskell] USE="-doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/skylighting-core-0.12.3.1:0/0.12.3.1::gentoo [0.14:0/0.14::haskell] USE="-doc -executable -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/doctemplates-0.10.0.2:0/0.10.0.2::gentoo [0.11:0/0.11::haskell] USE="-doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/hslua-aeson-2.2.0:0/2.2.0::gentoo [2.3.0.1:0/2.3.0.1::haskell] USE="-doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/hslua-2.2.0:0/2.2.0::gentoo [2.3.0:0/2.3.0::haskell] USE="-doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/citeproc-0.7:0/0.7::gentoo [0.8.1:0/0.8.1::haskell] USE="icu -doc -executable -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild  N     ] dev-haskell/connection-0.3.1:0/0.3.1::gentoo  USE="-doc -hscolour -profile" 0 KiB
+[ebuild     UD ] dev-haskell/skylighting-0.12.3.1:0/0.12.3.1::gentoo [0.14:0/0.14::haskell] USE="-doc -executable -hscolour -profile (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/texmath-0.12.5.1:0/0.12.5.1::gentoo [0.12.8.1:0/0.12.8.1::haskell] USE="-doc -executable -hscolour -profile -server -test (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/hslua-module-doclayout-1.0.4:0/1.0.4::gentoo [1.1.0:0/1.1.0::haskell] USE="-doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild     UD ] dev-haskell/pandoc-lua-marshal-0.1.6:0/0.1.6::gentoo [0.2.2:0/0.2.2::haskell] USE="-doc -hscolour -profile -test (-hoogle%)" 0 KiB
+[ebuild  N     ] app-text/pandoc-2.18-r2:0/2.18::gentoo  USE="-doc -embed-data-files -hscolour -profile -test -trypandoc" 0 KiB
+[ebuild     U  ] media-libs/mesa-23.2.0_rc4::gentoo [23.2.0_rc3::gentoo] USE="X gles2 llvm proprietary-codecs vulkan wayland zstd -d3d9 -debug -gles1 -lm-sensors -opencl -osmesa (-selinux) -test -unwind -vaapi -valgrind -vdpau -vulkan-overlay -xa -zink" ABI_X86="(64) -32 (-x32)" CPU_FLAGS_X86="sse2" VIDEO_CARDS="intel nouveau radeon radeonsi -d3d12 (-freedreno) -lavapipe (-lima) (-panfrost) -r300 -r600 (-v3d) (-vc4) -virgl (-vivante) -vmware" 0 KiB
+
+Total: 38 packages (1 upgrade, 29 downgrades, 8 new), Size of downloads: 0 KiB
+
+!!! Multiple package instances within a single package slot have been pulled
+!!! into the dependency graph, resulting in a slot conflict:
+
+dev-haskell/aeson:0
+
+  (dev-haskell/aeson-2.0.3.0:0/2.0.3.0::gentoo, ebuild scheduled for merge) USE="ordered-keymap -cffi -doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/aeson-2.1:=[profile?] required by (dev-haskell/pandoc-types-1.22.2:0/1.22.2::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)"
+    ^                  ^^^ ^                                                                                                                                                         
+    (and 2 more with the same problem)
+
+  (dev-haskell/aeson-2.1.2.1:0/2.1.2.1::haskell, installed) USE="ordered-keymap -cffi -doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    >=dev-haskell/aeson-2.0.1.0:0/2.1.2.1= required by (dev-haskell/pandoc-3.1.7:0/3.1.7::haskell, installed) USE="-doc -embed-data-files -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                               ^^^^^^^^^^^                                                                                                                                                 
+    (and 26 more with the same problem)
+
+dev-haskell/lua:0
+
+  (dev-haskell/lua-2.2.0:0/2.2.0::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -system-lua -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/lua-2.3:=[profile?] required by (dev-haskell/pandoc-lua-marshal-0.1.6:0/0.1.6::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)"
+    ^                ^^^ ^                                                                                                                                                             
+    (and 1 more with the same problem)
+
+  (dev-haskell/lua-2.3.1:0/2.3.1::haskell, installed) USE="-doc -hoogle -hscolour -profile -system-lua -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/lua-2.4:0/2.3.1= required by (dev-haskell/pandoc-lua-marshal-0.2.2:0/0.2.2::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                        ^^^^^^^^^                                                                                                                                           
+    >=dev-haskell/lua-2.3.1:=[profile?] required by (dev-haskell/hslua-core-2.3.1:0/2.3.1::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                ^^^^^                                                                                                                                               
+    (and 11 more with the same problems)
+
+dev-haskell/pandoc-types:0
+
+  (dev-haskell/pandoc-types-1.22.2:0/1.22.2::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/pandoc-types-1.23:=[profile?] required by (dev-haskell/pandoc-lua-marshal-0.1.6:0/0.1.6::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)"
+    ^                         ^^^^ ^                                                                                                                                                             
+    (and 3 more with the same problem)
+
+  (dev-haskell/pandoc-types-1.23.1:0/1.23.1::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    >=dev-haskell/pandoc-types-1.21:0/1.23.1= required by (dev-haskell/commonmark-pandoc-0.2.1.3:0/0.2.1.3::haskell, installed) USE="-doc -hoogle -hscolour -profile" ABI_X86="(64)"
+                                   ^^^^^^^^^^                                                                                                                                        
+    =dev-haskell/pandoc-types-1.23*:0/1.23.1= required by (dev-haskell/pandoc-crossref-0.3.16.0-r1:0/0.3.16.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^                         ^^^^^^^^^^^^^^^                                                                                                                                                 
+    >=dev-haskell/pandoc-types-1.23.1:=[profile?] required by (dev-haskell/pandoc-3.1.7:0/3.1.7::haskell, installed) USE="-doc -embed-data-files -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                         ^^^^^^                                                                                                                                                             
+    (and 15 more with the same problems)
+
+dev-haskell/base-compat-batteries:0
+
+  (dev-haskell/base-compat-batteries-0.13.0:0/0.13.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/base-compat-batteries-0.14:0/0.13.0= required by (dev-haskell/aeson-2.1.2.1:0/2.1.2.1::haskell, installed) USE="ordered-keymap -cffi -doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                                           ^^^^^^^^^^                                                                                                                                                       
+    (and 3 more with the same problem)
+
+  (dev-haskell/base-compat-batteries-0.12.1:0/0.12.1::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/base-compat-batteries-0.13:=[profile?] required by (dev-haskell/aeson-2.0.3.0:0/2.0.3.0::gentoo, ebuild scheduled for merge) USE="ordered-keymap -cffi -doc -hscolour -profile -test" ABI_X86="(64)"
+    ^                                  ^^^^ ^                                                                                                                                                                         
+
+dev-haskell/onetuple:0
+
+  (dev-haskell/onetuple-0.4.1.1:0/0.4.1.1::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    >=dev-haskell/onetuple-0.3:0/0.4.1.1= required by (dev-haskell/indexed-traversable-instances-0.1.1.2:0/0.1.1.2::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                              ^^^^^^^^^^^                                                                                                                                                          
+    >=dev-haskell/onetuple-0.4:0/0.4.1.1= required by (dev-haskell/base-compat-batteries-0.13.0:0/0.13.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                        ^^^^^^^^^^^                                                                                                                                                
+    (and 5 more with the same problems)
+
+  (dev-haskell/onetuple-0.3.1:0/0.3.1::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/onetuple-0.4:=[profile?] required by (dev-haskell/base-compat-batteries-0.12.1:0/0.12.1::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)"
+    ^                     ^^^ ^                                                                                                                                                                  
+    (and 1 more with the same problem)
+
+dev-haskell/semialign:0
+
+  (dev-haskell/semialign-1.3:0/1.3::haskell, installed) USE="semigroupoids -doc -hoogle -hscolour -profile" ABI_X86="(64)" pulled in by
+    >=dev-haskell/semialign-1.2:0/1.3= required by (dev-haskell/aeson-2.1.2.1:0/2.1.2.1::haskell, installed) USE="ordered-keymap -cffi -doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                               ^^^^^^^                                                                                                                                                       
+    (and 1 more with the same problem)
+
+  (dev-haskell/semialign-1.2.0.1:0/1.2.0.1::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile" ABI_X86="(64)" pulled in by
+    <dev-haskell/semialign-1.3:=[profile?] required by (dev-haskell/aeson-2.0.3.0:0/2.0.3.0::gentoo, ebuild scheduled for merge) USE="ordered-keymap -cffi -doc -hscolour -profile -test" ABI_X86="(64)"
+    ^                      ^^^ ^                                                                                                                                                                         
+
+dev-haskell/strict:0
+
+  (dev-haskell/strict-0.5:0/0.5::haskell, installed) USE="-doc -hoogle -hscolour -profile" ABI_X86="(64)" pulled in by
+    >=dev-haskell/strict-0.4:0/0.5= required by (dev-haskell/aeson-2.1.2.1:0/2.1.2.1::haskell, installed) USE="ordered-keymap -cffi -doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                            ^^^^^^^                                                                                                                                                       
+    (and 1 more with the same problem)
+
+  (dev-haskell/strict-0.4.0.1:0/0.4.0.1::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile" ABI_X86="(64)" pulled in by
+    <dev-haskell/strict-0.5:=[profile?] required by (dev-haskell/aeson-2.0.3.0:0/2.0.3.0::gentoo, ebuild scheduled for merge) USE="ordered-keymap -cffi -doc -hscolour -profile -test" ABI_X86="(64)"
+    ^                   ^^^ ^                                                                                                                                                                         
+
+dev-haskell/these:0
+
+  (dev-haskell/these-1.2:0/1.2::haskell, installed) USE="-doc -hoogle -hscolour -profile" ABI_X86="(64)" pulled in by
+    >=dev-haskell/these-1.2:=[profile?] required by (dev-haskell/semialign-1.3:0/1.3::haskell, installed) USE="semigroupoids -doc -hoogle -hscolour -profile" ABI_X86="(64)"
+    ^^                  ^^^                                                                                                                                                  
+    <dev-haskell/these-1.3:0/1.2= required by (dev-haskell/aeson-2.1.2.1:0/2.1.2.1::haskell, installed) USE="ordered-keymap -cffi -doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                          ^^^^^^^                                                                                                                                                       
+    (and 6 more with the same problems)
+
+  (dev-haskell/these-1.1.1.1:0/1.1.1.1::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile" ABI_X86="(64)" pulled in by
+    <dev-haskell/these-1.2:=[profile?] required by (dev-haskell/strict-0.4.0.1:0/0.4.0.1::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile" ABI_X86="(64)"
+    ^                  ^^^ ^                                                                                                                                               
+    (and 2 more with the same problem)
+
+dev-haskell/assoc:0
+
+  (dev-haskell/assoc-1.1:0/1.1::haskell, installed) USE="tagged -doc -hoogle -hscolour -profile" ABI_X86="(64)" pulled in by
+    >=dev-haskell/assoc-1.1:0/1.1= required by (dev-haskell/these-1.2:0/1.2::haskell, installed) USE="-doc -hoogle -hscolour -profile" ABI_X86="(64)"
+    ^^                     ^^^^^^^                                                                                                                    
+    <dev-haskell/assoc-1.2:0/1.1= required by (dev-haskell/these-1.2:0/1.2::haskell, installed) USE="-doc -hoogle -hscolour -profile" ABI_X86="(64)"
+                          ^^^^^^^                                                                                                                    
+    (and 4 more with the same problems)
+
+  (dev-haskell/assoc-1.0.2:0/1.0.2::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile" ABI_X86="(64)" pulled in by
+    <dev-haskell/assoc-1.1:=[profile?] required by (dev-haskell/these-1.1.1.1:0/1.1.1.1::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile" ABI_X86="(64)"
+    ^                  ^^^ ^                                                                                                                                              
+    (and 1 more with the same problem)
+
+dev-haskell/base-compat:0
+
+  (dev-haskell/base-compat-0.13.0:0/0.13.0::haskell, installed) USE="-doc -hoogle -hscolour -profile" ABI_X86="(64)" pulled in by
+    <dev-haskell/base-compat-0.14:0/0.13.0= required by (dev-haskell/servant-server-0.20:0/0.20::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                                 ^^^^^^^^^^                                                                                                                                     
+    ~dev-haskell/base-compat-0.13.0:0/0.13.0= required by (dev-haskell/base-compat-batteries-0.13.0:0/0.13.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^                              ^^^^^^^^^^                                                                                                                                                
+    (and 8 more with the same problems)
+
+  (dev-haskell/base-compat-0.12.1:0/0.12.1::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile" ABI_X86="(64)" pulled in by
+    ~dev-haskell/base-compat-0.12.1:=[profile?] required by (dev-haskell/base-compat-batteries-0.12.1:0/0.12.1::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)"
+    ^                        ^^^^^^ ^                                                                                                                                                                  
+
+dev-haskell/hslua-marshalling:0
+
+  (dev-haskell/hslua-marshalling-2.2.0:0/2.2.0::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/hslua-marshalling-2.3:=[profile?] required by (dev-haskell/hslua-2.2.0:0/2.2.0::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)"
+    ^                              ^^^ ^                                                                                                                                                
+    (and 9 more with the same problem)
+
+  (dev-haskell/hslua-marshalling-2.3.0:0/2.3.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    >=dev-haskell/hslua-marshalling-2.3:=[profile?] required by (dev-haskell/hslua-typing-0.1.0:0/0.1.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                              ^^^                                                                                                                                                 
+    <dev-haskell/hslua-marshalling-2.4:0/2.3.0= required by (dev-haskell/hslua-cli-1.4.1:0/1.4.1::haskell, installed) USE="-doc -executable -hoogle -hscolour -profile" ABI_X86="(64)"
+                                      ^^^^^^^^^                                                                                                                                        
+    (and 30 more with the same problems)
+
+dev-haskell/hslua-core:0
+
+  (dev-haskell/hslua-core-2.2.0:0/2.2.0::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/hslua-core-2.3:=[profile?] required by (dev-haskell/hslua-module-system-1.0.2:0/1.0.2::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)"
+    ^                       ^^^ ^                                                                                                                                                              
+    (and 9 more with the same problem)
+
+  (dev-haskell/hslua-core-2.3.1:0/2.3.1::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    >=dev-haskell/hslua-core-2.1:0/2.3.1= required by (dev-haskell/hslua-module-system-1.1.0.1:0/1.1.0.1::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                                ^^^^^^^^^                                                                                                                                                
+    >=dev-haskell/hslua-core-2.3.1:0/2.3.1= required by (dev-haskell/hslua-repl-0.1.1:0/0.1.1::haskell, installed) USE="-doc -executable -hoogle -hscolour -profile" ABI_X86="(64)"
+    ^^                            ^^^^^^^^^                                                                                                                                         
+    (and 38 more with the same problems)
+
+dev-haskell/hslua-packaging:0
+
+  (dev-haskell/hslua-packaging-2.2.0:0/2.2.0::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/hslua-packaging-2.3:=[profile?] required by (dev-haskell/hslua-module-system-1.0.2:0/1.0.2::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)"
+    ^                            ^^^ ^                                                                                                                                                              
+    (and 4 more with the same problem)
+
+  (dev-haskell/hslua-packaging-2.3.0:0/2.3.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    >=dev-haskell/hslua-packaging-2.3:=[profile?] required by (dev-haskell/hslua-module-zip-1.1.0:0/1.1.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                            ^^^                                                                                                                                                     
+    <dev-haskell/hslua-packaging-2.4:0/2.3.0= required by (dev-haskell/hslua-module-path-1.1.0:0/1.1.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                                    ^^^^^^^^^                                                                                                                                          
+    (and 16 more with the same problems)
+
+dev-haskell/hslua-objectorientation:0
+
+  (dev-haskell/hslua-objectorientation-2.2.0:0/2.2.0::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/hslua-objectorientation-2.3:=[profile?] required by (dev-haskell/hslua-packaging-2.2.0:0/2.2.0::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)"
+    ^                                    ^^^ ^                                                                                                                                                          
+    (and 1 more with the same problem)
+
+  (dev-haskell/hslua-objectorientation-2.3.0:0/2.3.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/hslua-objectorientation-2.4:0/2.3.0= required by (dev-haskell/hslua-2.3.0:0/2.3.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                                            ^^^^^^^^^                                                                                                                              
+    >=dev-haskell/hslua-objectorientation-2.3:=[profile?] required by (dev-haskell/hslua-2.3.0:0/2.3.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                                    ^^^                                                                                                                                          
+    (and 4 more with the same problems)
+
+dev-haskell/pandoc-lua-marshal:0
+
+  (dev-haskell/pandoc-lua-marshal-0.1.6:0/0.1.6::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/pandoc-lua-marshal-0.2:=[profile?] required by (app-text/pandoc-2.18-r2:0/2.18::gentoo, ebuild scheduled for merge) USE="-doc -embed-data-files -hscolour -profile -test -trypandoc" ABI_X86="(64)"
+    ^                               ^^^ ^                                                                                                                                                                            
+
+  (dev-haskell/pandoc-lua-marshal-0.2.2:0/0.2.2::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    >=dev-haskell/pandoc-lua-marshal-0.2.2:0/0.2.2= required by (dev-haskell/pandoc-lua-engine-0.2.1.2:0/0.2.1.2::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                                    ^^^^^^^^^                                                                                                                                              
+    <dev-haskell/pandoc-lua-marshal-0.3:0/0.2.2= required by (dev-haskell/pandoc-lua-engine-0.2.1.2:0/0.2.1.2::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                                       ^^^^^^^^^                                                                                                                                              
+    (and 1 more with the same problems)
+
+dev-haskell/hslua:0
+
+  (dev-haskell/hslua-2.2.0:0/2.2.0::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/hslua-2.3:=[profile?] required by (dev-haskell/hslua-module-doclayout-1.0.4:0/1.0.4::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)"
+    ^                  ^^^ ^                                                                                                                                                                 
+    (and 2 more with the same problem)
+
+  (dev-haskell/hslua-2.3.0:0/2.3.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/hslua-2.4:0/2.3.0= required by (dev-haskell/pandoc-lua-engine-0.2.1.2:0/0.2.1.2::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                          ^^^^^^^^^                                                                                                                                              
+    >=dev-haskell/hslua-2.3:0/2.3.0= required by (dev-haskell/hslua-module-doclayout-1.1.0:0/1.1.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                     ^^^^^^^^^                                                                                                                                               
+    (and 6 more with the same problems)
+
+dev-haskell/hslua-classes:0
+
+  (dev-haskell/hslua-classes-2.2.0:0/2.2.0::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/hslua-classes-2.3:=[profile?] required by (dev-haskell/hslua-2.2.0:0/2.2.0::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)"
+    ^                          ^^^ ^                                                                                                                                                
+
+  (dev-haskell/hslua-classes-2.3.0:0/2.3.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/hslua-classes-2.4:0/2.3.0= required by (dev-haskell/hslua-2.3.0:0/2.3.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                                  ^^^^^^^^^                                                                                                                              
+    (and 1 more with the same problem)
+
+dev-haskell/hslua-aeson:0
+
+  (dev-haskell/hslua-aeson-2.2.0:0/2.2.0::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/hslua-aeson-2.3:=[profile?] required by (dev-haskell/hslua-2.2.0:0/2.2.0::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)"
+    ^                        ^^^ ^                                                                                                                                                
+
+  (dev-haskell/hslua-aeson-2.3.0.1:0/2.3.0.1::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/hslua-aeson-2.4:0/2.3.0.1= required by (dev-haskell/hslua-2.3.0:0/2.3.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                                ^^^^^^^^^^^                                                                                                                              
+    >=dev-haskell/hslua-aeson-2.3:=[profile?] required by (dev-haskell/hslua-2.3.0:0/2.3.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                        ^^^                                                                                                                                          
+    (and 1 more with the same problems)
+
+dev-haskell/hslua-module-version:0
+
+  (dev-haskell/hslua-module-version-1.0.2:0/1.0.2::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/hslua-module-version-1.1:=[profile?] required by (app-text/pandoc-2.18-r2:0/2.18::gentoo, ebuild scheduled for merge) USE="-doc -embed-data-files -hscolour -profile -test -trypandoc" ABI_X86="(64)"
+    ^                                 ^^^ ^                                                                                                                                                                            
+
+  (dev-haskell/hslua-module-version-1.1.0:0/1.1.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    >=dev-haskell/hslua-module-version-1.1:=[profile?] required by (dev-haskell/pandoc-lua-engine-0.2.1.2:0/0.2.1.2::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                                 ^^^                                                                                                                                                          
+    <dev-haskell/hslua-module-version-1.2:0/1.1.0= required by (dev-haskell/pandoc-lua-engine-0.2.1.2:0/0.2.1.2::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                                         ^^^^^^^^^                                                                                                                                              
+    (and 1 more with the same problems)
+
+dev-haskell/hslua-module-text:0
+
+  (dev-haskell/hslua-module-text-1.0.2:0/1.0.2::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/hslua-module-text-1.1:=[profile?] required by (app-text/pandoc-2.18-r2:0/2.18::gentoo, ebuild scheduled for merge) USE="-doc -embed-data-files -hscolour -profile -test -trypandoc" ABI_X86="(64)"
+    ^                              ^^^ ^                                                                                                                                                                            
+
+  (dev-haskell/hslua-module-text-1.1.0.1:0/1.1.0.1::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    >=dev-haskell/hslua-module-text-1.1:0/1.1.0.1= required by (dev-haskell/pandoc-lua-engine-0.2.1.2:0/0.2.1.2::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                                 ^^^^^^^^^^^                                                                                                                                              
+    <dev-haskell/hslua-module-text-1.2:0/1.1.0.1= required by (dev-haskell/pandoc-lua-engine-0.2.1.2:0/0.2.1.2::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                                      ^^^^^^^^^^^                                                                                                                                              
+    (and 1 more with the same problems)
+
+dev-haskell/hslua-module-system:0
+
+  (dev-haskell/hslua-module-system-1.0.2:0/1.0.2::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/hslua-module-system-1.1:=[profile?] required by (app-text/pandoc-2.18-r2:0/2.18::gentoo, ebuild scheduled for merge) USE="-doc -embed-data-files -hscolour -profile -test -trypandoc" ABI_X86="(64)"
+    ^                                ^^^ ^                                                                                                                                                                            
+
+  (dev-haskell/hslua-module-system-1.1.0.1:0/1.1.0.1::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    >=dev-haskell/hslua-module-system-1.1:=[profile?] required by (dev-haskell/pandoc-lua-engine-0.2.1.2:0/0.2.1.2::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                                ^^^                                                                                                                                                          
+    <dev-haskell/hslua-module-system-1.2:0/1.1.0.1= required by (dev-haskell/pandoc-lua-engine-0.2.1.2:0/0.2.1.2::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                                        ^^^^^^^^^^^                                                                                                                                              
+    (and 1 more with the same problems)
+
+dev-haskell/hslua-module-path:0
+
+  (dev-haskell/hslua-module-path-1.0.2:0/1.0.2::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/hslua-module-path-1.1:=[profile?] required by (app-text/pandoc-2.18-r2:0/2.18::gentoo, ebuild scheduled for merge) USE="-doc -embed-data-files -hscolour -profile -test -trypandoc" ABI_X86="(64)"
+    ^                              ^^^ ^                                                                                                                                                                            
+
+  (dev-haskell/hslua-module-path-1.1.0:0/1.1.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/hslua-module-path-1.2:0/1.1.0= required by (dev-haskell/pandoc-lua-engine-0.2.1.2:0/0.2.1.2::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                                      ^^^^^^^^^                                                                                                                                              
+    >=dev-haskell/hslua-module-path-1.1:0/1.1.0= required by (dev-haskell/pandoc-lua-engine-0.2.1.2:0/0.2.1.2::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                                 ^^^^^^^^^                                                                                                                                              
+    (and 1 more with the same problems)
+
+dev-haskell/hslua-module-doclayout:0
+
+  (dev-haskell/hslua-module-doclayout-1.0.4:0/1.0.4::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/hslua-module-doclayout-1.1:=[profile?] required by (app-text/pandoc-2.18-r2:0/2.18::gentoo, ebuild scheduled for merge) USE="-doc -embed-data-files -hscolour -profile -test -trypandoc" ABI_X86="(64)"
+    ^                                   ^^^ ^                                                                                                                                                                            
+
+  (dev-haskell/hslua-module-doclayout-1.1.0:0/1.1.0::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    >=dev-haskell/hslua-module-doclayout-1.1:=[profile?] required by (dev-haskell/pandoc-lua-engine-0.2.1.2:0/0.2.1.2::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                                   ^^^                                                                                                                                                          
+    <dev-haskell/hslua-module-doclayout-1.2:0/1.1.0= required by (dev-haskell/pandoc-lua-engine-0.2.1.2:0/0.2.1.2::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                                           ^^^^^^^^^                                                                                                                                              
+    (and 1 more with the same problems)
+
+dev-haskell/doctemplates:0
+
+  (dev-haskell/doctemplates-0.10.0.2:0/0.10.0.2::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/doctemplates-0.11:=[profile?] required by (app-text/pandoc-2.18-r2:0/2.18::gentoo, ebuild scheduled for merge) USE="-doc -embed-data-files -hscolour -profile -test -trypandoc" ABI_X86="(64)"
+    ^                         ^^^^ ^                                                                                                                                                                            
+
+  (dev-haskell/doctemplates-0.11:0/0.11::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/doctemplates-0.12:0/0.11= required by (dev-haskell/pandoc-3.1.7:0/3.1.7::haskell, installed) USE="-doc -embed-data-files -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                                  ^^^^^^^^                                                                                                                                                 
+    >=dev-haskell/doctemplates-0.11:=[profile?] required by (dev-haskell/pandoc-server-0.1.0.3:0/0.1.0.3::haskell, installed) USE="-doc -hoogle -hscolour -profile" ABI_X86="(64)"
+    ^^                         ^^^^                                                                                                                                                
+    (and 7 more with the same problems)
+
+dev-haskell/citeproc:0
+
+  (dev-haskell/citeproc-0.7:0/0.7::gentoo, ebuild scheduled for merge) USE="icu -doc -executable -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/citeproc-0.8:=[profile?] required by (app-text/pandoc-2.18-r2:0/2.18::gentoo, ebuild scheduled for merge) USE="-doc -embed-data-files -hscolour -profile -test -trypandoc" ABI_X86="(64)"
+    ^                     ^^^ ^                                                                                                                                                                            
+
+  (dev-haskell/citeproc-0.8.1:0/0.8.1::haskell, installed) USE="icu -doc -executable -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/citeproc-0.9:0/0.8.1= required by (dev-haskell/pandoc-lua-engine-0.2.1.2:0/0.2.1.2::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                             ^^^^^^^^^                                                                                                                                              
+    >=dev-haskell/citeproc-0.8.1:0/0.8.1= required by (dev-haskell/pandoc-3.1.7:0/3.1.7::haskell, installed) USE="-doc -embed-data-files -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                          ^^^^^^^^^                                                                                                                                                 
+    (and 4 more with the same problems)
+
+dev-haskell/skylighting:0
+
+  (dev-haskell/skylighting-0.12.3.1:0/0.12.3.1::gentoo, ebuild scheduled for merge) USE="-doc -executable -hscolour -profile" ABI_X86="(64)" pulled in by
+    <dev-haskell/skylighting-0.13:=[profile?] required by (app-text/pandoc-2.18-r2:0/2.18::gentoo, ebuild scheduled for merge) USE="-doc -embed-data-files -hscolour -profile -test -trypandoc" ABI_X86="(64)"
+    ^                        ^^^^ ^                                                                                                                                                                            
+
+  (dev-haskell/skylighting-0.14:0/0.14::haskell, installed) USE="-doc -executable -hoogle -hscolour -profile" ABI_X86="(64)" pulled in by
+    >=dev-haskell/skylighting-0.14:0/0.14= required by (dev-haskell/pandoc-3.1.7:0/3.1.7::haskell, installed) USE="-doc -embed-data-files -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                            ^^^^^^^^                                                                                                                                                 
+    <dev-haskell/skylighting-0.15:0/0.14= required by (dev-haskell/pandoc-3.1.7:0/3.1.7::haskell, installed) USE="-doc -embed-data-files -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                                 ^^^^^^^^                                                                                                                                                 
+    (and 4 more with the same problems)
+
+dev-haskell/skylighting-core:0
+
+  (dev-haskell/skylighting-core-0.12.3.1:0/0.12.3.1::gentoo, ebuild scheduled for merge) USE="-doc -executable -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/skylighting-core-0.13:=[profile?] required by (app-text/pandoc-2.18-r2:0/2.18::gentoo, ebuild scheduled for merge) USE="-doc -embed-data-files -hscolour -profile -test -trypandoc" ABI_X86="(64)"
+    ^                             ^^^^ ^                                                                                                                                                                            
+    ~dev-haskell/skylighting-core-0.12.3.1:=[profile?] required by (dev-haskell/skylighting-0.12.3.1:0/0.12.3.1::gentoo, ebuild scheduled for merge) USE="-doc -executable -hscolour -profile" ABI_X86="(64)"
+    ^                             ^^^^^^^^ ^                                                                                                                                                                  
+
+  (dev-haskell/skylighting-core-0.14:0/0.14::haskell, installed) USE="-doc -executable -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    ~dev-haskell/skylighting-core-0.14:0/0.14= required by (dev-haskell/skylighting-0.14:0/0.14::haskell, installed) USE="-doc -executable -hoogle -hscolour -profile" ABI_X86="(64)"
+    ^                                 ^^^^^^^^                                                                                                                                        
+    dev-haskell/skylighting-core:0/0.14= required by (dev-haskell/skylighting-format-blaze-html-0.1.1.1:0/0.1.1.1::haskell, installed) USE="-doc -hoogle -hscolour -profile" ABI_X86="(64)"
+                                ^^^^^^^^                                                                                                                                                    
+    >=dev-haskell/skylighting-core-0.14:0/0.14= required by (dev-haskell/pandoc-3.1.7:0/3.1.7::haskell, installed) USE="-doc -embed-data-files -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                                 ^^^^^^^^                                                                                                                                                 
+    (and 6 more with the same problems)
+
+dev-haskell/texmath:0
+
+  (dev-haskell/texmath-0.12.5.1:0/0.12.5.1::gentoo, ebuild scheduled for merge) USE="-doc -executable -hscolour -profile -server -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/texmath-0.12.6:=[profile?] required by (app-text/pandoc-2.18-r2:0/2.18::gentoo, ebuild scheduled for merge) USE="-doc -embed-data-files -hscolour -profile -test -trypandoc" ABI_X86="(64)"
+    ^                    ^^^^^^ ^                                                                                                                                                                            
+
+  (dev-haskell/texmath-0.12.8.1:0/0.12.8.1::haskell, installed) USE="-doc -executable -hoogle -hscolour -profile -server -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/texmath-0.13:0/0.12.8.1= required by (dev-haskell/pandoc-3.1.7:0/3.1.7::haskell, installed) USE="-doc -embed-data-files -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                             ^^^^^^^^^^^^                                                                                                                                                 
+    >=dev-haskell/texmath-0.12.8.1:0/0.12.8.1= required by (dev-haskell/pandoc-3.1.7:0/3.1.7::haskell, installed) USE="-doc -embed-data-files -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                            ^^^^^^^^^^^^                                                                                                                                                 
+    (and 1 more with the same problems)
+
+dev-haskell/jira-wiki-markup:0
+
+  (dev-haskell/jira-wiki-markup-1.4.0:0/1.4.0::gentoo, ebuild scheduled for merge) USE="-doc -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/jira-wiki-markup-1.5:=[profile?] required by (app-text/pandoc-2.18-r2:0/2.18::gentoo, ebuild scheduled for merge) USE="-doc -embed-data-files -hscolour -profile -test -trypandoc" ABI_X86="(64)"
+    ^                             ^^^ ^                                                                                                                                                                            
+
+  (dev-haskell/jira-wiki-markup-1.5.1:0/1.5.1::haskell, installed) USE="-doc -hoogle -hscolour -profile -test" ABI_X86="(64)" pulled in by
+    <dev-haskell/jira-wiki-markup-1.6:0/1.5.1= required by (dev-haskell/pandoc-3.1.7:0/3.1.7::haskell, installed) USE="-doc -embed-data-files -hoogle -hscolour -profile -test" ABI_X86="(64)"
+                                     ^^^^^^^^^                                                                                                                                                 
+    >=dev-haskell/jira-wiki-markup-1.5.1:=[profile?] required by (dev-haskell/pandoc-3.1.7:0/3.1.7::haskell, installed) USE="-doc -embed-data-files -hoogle -hscolour -profile -test" ABI_X86="(64)"
+    ^^                             ^^^^^                                                                                                                                                             
+    (and 1 more with the same problems)
+
+NOTE: Use the '--verbose-conflicts' option to display parents omitted above
+
+It may be possible to solve this problem by using package.mask to
+prevent one of those packages from being selected. However, it is also
+possible that conflicting dependencies exist such that they are
+impossible to satisfy simultaneously.  If such a conflict exists in
+the dependencies of two different packages, then those packages can
+not be installed simultaneously. You may want to try a larger value of
+the --backtrack option, such as --backtrack=30, in order to see if
+that will solve this conflict automatically.
+
+For more information, see MASKED PACKAGES section in the emerge man
+page or refer to the Gentoo Handbook.
+
