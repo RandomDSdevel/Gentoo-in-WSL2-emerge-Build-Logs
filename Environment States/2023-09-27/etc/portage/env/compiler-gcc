@@ -1,0 +1,14 @@
+CC="gcc"
+CXX="g++"
+AR="gcc-ar"
+NM="gcc-nm"
+RANLIB="gcc-ranlib"
+
+COMMON_FLAGS="-march=native -mtune=native -O2 -pipe"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
+LDFLAGS="-fuse-ld=lld -Wl,--as-needed -Wl,-z,relro,-z,now"
+
+USE="-clang"

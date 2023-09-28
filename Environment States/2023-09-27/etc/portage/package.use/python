@@ -1,0 +1,3 @@
+dev-lang/python bluetooth examples lto tk
+*/* PYTHON_TARGETS:  -* python3_11
+*/* PYTHON_SINGLE_TARGET:  -* python3_11
