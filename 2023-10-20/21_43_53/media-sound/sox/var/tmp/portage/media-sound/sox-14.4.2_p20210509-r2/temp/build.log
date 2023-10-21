@@ -1,0 +1,776 @@
+[32m * [39;49;00mPackage:    media-sound/sox-14.4.2_p20210509-r2:0
+[32m * [39;49;00mRepository: gentoo
+[32m * [39;49;00mMaintainer: sound@gentoo.org
+[32m * [39;49;00mUSE:        abi_x86_64 alsa amd64 elibc_glibc encode flac kernel_linux mad ogg openmp png pulseaudio
+[32m * [39;49;00mFEATURES:   network-sandbox preserve-libs sandbox userpriv usersandbox
+>>> Unpacking source...
+>>> Unpacking sox-14.4.2_p20210509.zip to /var/tmp/portage/media-sound/sox-14.4.2_p20210509-r2/work
+>>> Source unpacked in /var/tmp/portage/media-sound/sox-14.4.2_p20210509-r2/work
+>>> Preparing source in /var/tmp/portage/media-sound/sox-14.4.2_p20210509-r2/work/sox-code-42b3557e13e0fe01a83465b672d89faddbe65f49 ...
+ * Running eautoreconf in '/var/tmp/portage/media-sound/sox-14.4.2_p20210509-r2/work/sox-code-42b3557e13e0fe01a83465b672d89faddbe65f49' ...
+ * Running 'libtoolize --install --copy --force --automake' ...
+ [ ok ]
+ * Running 'aclocal -I m4 --system-acdir=/var/tmp/portage/media-sound/sox-14.4.2_p20210509-r2/temp/aclocal' ...
+ [ ok ]
+ * Running 'autoconf --force' ...
+ [ ok ]
+ * Running 'autoheader' ...
+ [ ok ]
+ * Running 'automake --add-missing --copy --foreign --force-missing' ...
+ [ ok ]
+ (B[m[1m[32m*(B[m Running elibtoolize in: sox-code-42b3557e13e0fe01a83465b672d89faddbe65f49/
+ (B[m[1m[32m*(B[m   Applying portage/1.2.0 patch ...
+ (B[m[1m[32m*(B[m   Applying sed/1.5.6 patch ...
+ (B[m[1m[32m*(B[m   Applying as-needed/2.4.3 patch ...
+>>> Source prepared.
+>>> Configuring source in /var/tmp/portage/media-sound/sox-14.4.2_p20210509-r2/work/sox-code-42b3557e13e0fe01a83465b672d89faddbe65f49 ...
+ * econf: updating sox-code-42b3557e13e0fe01a83465b672d89faddbe65f49/config.sub with /usr/share/gnuconfig/config.sub
+ * econf: updating sox-code-42b3557e13e0fe01a83465b672d89faddbe65f49/config.guess with /usr/share/gnuconfig/config.guess
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --datarootdir=/usr/share --disable-dependency-tracking --disable-silent-rules --disable-static --docdir=/usr/share/doc/sox-14.4.2_p20210509-r2 --htmldir=/usr/share/doc/sox-14.4.2_p20210509-r2/html --with-sysroot=/ --libdir=/usr/lib64 --enable-alsa --disable-amrnb --disable-amrwb --disable-ao --with-lame --enable-flac --without-id3tag --without-ladspa --with-mad --without-magic --enable-openmp --enable-oggvorbis --disable-oss --disable-opus --with-png --enable-pulseaudio --disable-sndfile --disable-sndio --disable-static --without-twolame --disable-wavpack --enable-formats=dyn --with-distro=Gentoo
+checking for a BSD-compatible install... /usr/lib/portage/python3.12/ebuild-helpers/xattr/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking whether make supports the include directive... yes (GNU style)
+checking for x86_64-pc-linux-gnu-gcc... clang
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether clang accepts -g... yes
+checking for clang option to enable C11 features... none needed
+checking whether clang understands -c and -o together... yes
+checking dependency style of clang... none
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by clang... /usr/lib/llvm/17/bin/x86_64-pc-linux-gnu-ld
+checking if the linker (/usr/lib/llvm/17/bin/x86_64-pc-linux-gnu-ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... llvm-nm
+checking the name lister (llvm-nm) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/lib/llvm/17/bin/x86_64-pc-linux-gnu-ld option to reload object files... -r
+checking for x86_64-pc-linux-gnu-file... no
+checking for file... file
+checking for x86_64-pc-linux-gnu-objdump... x86_64-pc-linux-gnu-objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-pc-linux-gnu-dlltool... x86_64-pc-linux-gnu-dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-pc-linux-gnu-ar... llvm-ar
+checking for archiver @FILE support... @
+checking for x86_64-pc-linux-gnu-strip... x86_64-pc-linux-gnu-strip
+checking for x86_64-pc-linux-gnu-ranlib... llvm-ranlib
+checking command to parse llvm-nm output from clang object... ok
+checking for sysroot... /
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-pc-linux-gnu-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if clang supports -fno-rtti -fno-exceptions... yes
+checking for clang option to produce PIC... -fPIC -DPIC
+checking if clang PIC flag -fPIC -DPIC works... yes
+checking if clang static flag -static works... no
+checking if clang supports -c -o file.o... yes
+checking if clang supports -c -o file.o... (cached) yes
+checking whether the clang linker (/usr/lib/llvm/17/bin/x86_64-pc-linux-gnu-ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for x86_64-pc-linux-gnu-gcc... (cached) clang
+checking whether the compiler supports GNU C... (cached) yes
+checking whether clang accepts -g... (cached) yes
+checking for clang option to enable C11 features... (cached) none needed
+checking whether clang understands -c and -o together... (cached) yes
+checking dependency style of clang... (cached) none
+checking whether ln -s works... yes
+checking for x86_64-pc-linux-gnu-pkg-config... /usr/bin/x86_64-pc-linux-gnu-pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking whether C compiler accepts -fstack-protector-strong... yes
+checking whether C compiler accepts -Wall... yes
+checking whether C compiler accepts -Wmissing-prototypes... yes
+checking whether C compiler accepts -Wstrict-prototypes... yes
+checking whether the linker accepts -Wl,--as-needed... yes
+checking whether byte ordering is bigendian... no
+checking for inline... inline
+checking for egrep... (cached) /bin/grep -E
+checking for fcntl.h... yes
+checking for unistd.h... (cached) yes
+checking for byteswap.h... yes
+checking for sys/ioctl.h... yes
+checking for sys/stat.h... (cached) yes
+checking for sys/time.h... yes
+checking for sys/timeb.h... yes
+checking for sys/types.h... (cached) yes
+checking for sys/utsname.h... yes
+checking for termios.h... yes
+checking for glob.h... yes
+checking for fenv.h... yes
+checking for strcasecmp... yes
+checking for strdup... yes
+checking for popen... yes
+checking for vsnprintf... yes
+checking for gettimeofday... yes
+checking for mkstemp... yes
+checking for fmemopen... yes
+checking for sigaction... yes
+checking for library containing pow... -lm
+checking for library containing lrint... none required
+checking for lrint... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for clang option to support OpenMP... -fopenmp
+checking for ltdl.h... yes
+checking for lt_dlinit in -lltdl... yes
+checking for zlib.h... yes
+checking for uncompress in -lz... yes
+checking for png.h... yes
+checking for png_set_rows in -lpng... yes
+checking for gsm/gsm.h... yes
+checking for gsm_create in -lgsm... yes
+checking for opencore-amrnb/interf_dec.h... no
+checking for opencore-amrwb/dec_if.h... no
+checking for vo-amrwbenc/enc_if.h... no
+checking for flac... yes
+checking for lpc10.h... no
+checking for mad.h... yes
+checking for mad_stream_buffer in -lmad... yes
+checking for lame/lame.h... yes
+checking for lame_init in -lmp3lame... yes
+checking for ogg vorbis vorbisenc vorbisfile... yes
+checking for sndfile.h... yes
+checking for sf_open_virtual in -lsndfile... yes
+checking for alsa/asoundlib.h... yes
+checking for snd_pcm_open in -lasound... yes
+checking for CoreAudio/CoreAudio.h... no
+checking for pulse/simple.h... yes
+checking for pa_simple_new in -lpulse... yes
+checking for clang options needed to detect all undeclared functions... (cached) none needed
+checking for sys/audioio.h... no
+checking for sun/audioio.h... no
+checking for mmsystem.h... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating lpc10/Makefile
+config.status: creating sox.pc
+config.status: creating src/soxconfig.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+Build options:
+  distro name             Gentoo
+  symlinks                soxi play rec
+
+Optional libraries:
+  id3tag                  no
+  lame                    yes
+  libgsm                  yes
+  libltdl                 yes
+  libsndfile              yes
+  mad                     yes
+  magic                   no
+  opencore-amrnb          no
+  opencore-amrwb          no
+  png                     yes
+  twolame                 no
+  vo-amrwbenc             no
+
+Optional formats:
+  amrnb                   no
+  amrwb                   no
+  flac                    yes
+  gsm                     dyn
+  lpc10                   dyn
+  mp3                     dyn
+  oggvorbis               yes
+  opus                    no
+  sndfile                 no
+  wavpack                 no
+
+Audio devices:
+  alsa                    yes
+  ao                      no
+  coreaudio               no
+  oss                     no
+  pulseaudio              yes
+  sndio                   no
+  sunaudio                no
+  waveaudio               no
+
+Other options:
+  OpenMP                  -fopenmp
+  LADSPA effect plugins   no
+
+Configure finished.  Run 'make' to compile SoX.
+
+>>> Source configured.
+>>> Compiling source in /var/tmp/portage/media-sound/sox-14.4.2_p20210509-r2/work/sox-code-42b3557e13e0fe01a83465b672d89faddbe65f49 ...
+make -j4 
+Making all in lpc10
+make[1]: Entering directory '/var/tmp/portage/media-sound/sox-14.4.2_p20210509-r2/work/sox-code-42b3557e13e0fe01a83465b672d89faddbe65f49/lpc10'
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o analys.lo analys.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o bsynz.lo bsynz.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o chanwr.lo chanwr.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o dcbias.lo dcbias.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c analys.c  -fPIC -DPIC -o .libs/analys.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c dcbias.c  -fPIC -DPIC -o .libs/dcbias.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c chanwr.c  -fPIC -DPIC -o .libs/chanwr.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c bsynz.c  -fPIC -DPIC -o .libs/bsynz.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o decode.lo decode.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o deemp.lo deemp.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o difmag.lo difmag.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o dyptrk.lo dyptrk.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c decode.c  -fPIC -DPIC -o .libs/decode.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c deemp.c  -fPIC -DPIC -o .libs/deemp.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c dyptrk.c  -fPIC -DPIC -o .libs/dyptrk.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c difmag.c  -fPIC -DPIC -o .libs/difmag.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o encode.lo encode.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o energy.lo energy.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o f2clib.lo f2clib.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o ham84.lo ham84.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c energy.c  -fPIC -DPIC -o .libs/energy.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c encode.c  -fPIC -DPIC -o .libs/encode.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c f2clib.c  -fPIC -DPIC -o .libs/f2clib.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c ham84.c  -fPIC -DPIC -o .libs/ham84.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o hp100.lo hp100.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o invert.lo invert.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o irc2pc.lo irc2pc.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o ivfilt.lo ivfilt.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c hp100.c  -fPIC -DPIC -o .libs/hp100.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c invert.c  -fPIC -DPIC -o .libs/invert.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c irc2pc.c  -fPIC -DPIC -o .libs/irc2pc.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c ivfilt.c  -fPIC -DPIC -o .libs/ivfilt.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o lpcdec.lo lpcdec.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o lpcenc.lo lpcenc.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o lpcini.lo lpcini.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o lpfilt.lo lpfilt.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c lpcdec.c  -fPIC -DPIC -o .libs/lpcdec.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c lpcenc.c  -fPIC -DPIC -o .libs/lpcenc.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c lpcini.c  -fPIC -DPIC -o .libs/lpcini.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c lpfilt.c  -fPIC -DPIC -o .libs/lpfilt.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o median.lo median.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o mload.lo mload.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o onset.lo onset.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o pitsyn.lo pitsyn.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c median.c  -fPIC -DPIC -o .libs/median.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c mload.c  -fPIC -DPIC -o .libs/mload.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o placea.lo placea.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c onset.c  -fPIC -DPIC -o .libs/onset.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c pitsyn.c  -fPIC -DPIC -o .libs/pitsyn.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o placev.lo placev.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o preemp.lo preemp.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c placea.c  -fPIC -DPIC -o .libs/placea.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o prepro.lo prepro.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c placev.c  -fPIC -DPIC -o .libs/placev.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o random.lo random.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c preemp.c  -fPIC -DPIC -o .libs/preemp.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o rcchk.lo rcchk.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c prepro.c  -fPIC -DPIC -o .libs/prepro.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o synths.lo synths.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c random.c  -fPIC -DPIC -o .libs/random.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c rcchk.c  -fPIC -DPIC -o .libs/rcchk.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o tbdm.lo tbdm.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o voicin.lo voicin.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c synths.c  -fPIC -DPIC -o .libs/synths.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I. -I../src  -I../src   -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o vparms.lo vparms.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c tbdm.c  -fPIC -DPIC -o .libs/tbdm.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c voicin.c  -fPIC -DPIC -o .libs/voicin.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -I../src -I../src -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c vparms.c  -fPIC -DPIC -o .libs/vparms.o
+/bin/sh ../libtool  --tag=CC   --mode=link clang  -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -avoid-version -module -fuse-ld=lld -rtlib=compiler-rt -unwindlib=libunwind -Wl,-O2 -Wl,--as-needed -Wl,-z,relro,-z,now -o liblpc10.la  analys.lo bsynz.lo chanwr.lo dcbias.lo decode.lo deemp.lo difmag.lo dyptrk.lo encode.lo energy.lo f2clib.lo ham84.lo hp100.lo invert.lo irc2pc.lo ivfilt.lo lpcdec.lo lpcenc.lo lpcini.lo lpfilt.lo median.lo mload.lo onset.lo pitsyn.lo placea.lo placev.lo preemp.lo prepro.lo random.lo rcchk.lo synths.lo tbdm.lo voicin.lo vparms.lo  -lm 
+libtool: link: llvm-ar cr .libs/liblpc10.a .libs/analys.o .libs/bsynz.o .libs/chanwr.o .libs/dcbias.o .libs/decode.o .libs/deemp.o .libs/difmag.o .libs/dyptrk.o .libs/encode.o .libs/energy.o .libs/f2clib.o .libs/ham84.o .libs/hp100.o .libs/invert.o .libs/irc2pc.o .libs/ivfilt.o .libs/lpcdec.o .libs/lpcenc.o .libs/lpcini.o .libs/lpfilt.o .libs/median.o .libs/mload.o .libs/onset.o .libs/pitsyn.o .libs/placea.o .libs/placev.o .libs/preemp.o .libs/prepro.o .libs/random.o .libs/rcchk.o .libs/synths.o .libs/tbdm.o .libs/voicin.o .libs/vparms.o 
+libtool: link: llvm-ranlib .libs/liblpc10.a
+libtool: link: ( cd ".libs" && rm -f "liblpc10.la" && ln -s "../liblpc10.la" "liblpc10.la" )
+make[1]: Leaving directory '/var/tmp/portage/media-sound/sox-14.4.2_p20210509-r2/work/sox-code-42b3557e13e0fe01a83465b672d89faddbe65f49/lpc10'
+Making all in src
+make[1]: Entering directory '/var/tmp/portage/media-sound/sox-14.4.2_p20210509-r2/work/sox-code-42b3557e13e0fe01a83465b672d89faddbe65f49/src'
+clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""    -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o sox.o sox.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-adpcms.lo `test -f 'adpcms.c' || echo './'`adpcms.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-aiff.lo `test -f 'aiff.c' || echo './'`aiff.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-cvsd.lo `test -f 'cvsd.c' || echo './'`cvsd.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c cvsd.c  -fPIC -DPIC -o .libs/libsox_la-cvsd.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c adpcms.c  -fPIC -DPIC -o .libs/libsox_la-adpcms.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c aiff.c  -fPIC -DPIC -o .libs/libsox_la-aiff.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-g711.lo `test -f 'g711.c' || echo './'`g711.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-g721.lo `test -f 'g721.c' || echo './'`g721.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c g711.c  -fPIC -DPIC -o .libs/libsox_la-g711.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-g723_24.lo `test -f 'g723_24.c' || echo './'`g723_24.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c g721.c  -fPIC -DPIC -o .libs/libsox_la-g721.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c g723_24.c  -fPIC -DPIC -o .libs/libsox_la-g723_24.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-g723_40.lo `test -f 'g723_40.c' || echo './'`g723_40.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-g72x.lo `test -f 'g72x.c' || echo './'`g72x.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c g723_40.c  -fPIC -DPIC -o .libs/libsox_la-g723_40.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-vox.lo `test -f 'vox.c' || echo './'`vox.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c g72x.c  -fPIC -DPIC -o .libs/libsox_la-g72x.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c vox.c  -fPIC -DPIC -o .libs/libsox_la-vox.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-raw.lo `test -f 'raw.c' || echo './'`raw.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c raw.c  -fPIC -DPIC -o .libs/libsox_la-raw.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-formats.lo `test -f 'formats.c' || echo './'`formats.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-formats_i.lo `test -f 'formats_i.c' || echo './'`formats_i.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-skelform.lo `test -f 'skelform.c' || echo './'`skelform.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c formats.c  -fPIC -DPIC -o .libs/libsox_la-formats.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c formats_i.c  -fPIC -DPIC -o .libs/libsox_la-formats_i.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c skelform.c  -fPIC -DPIC -o .libs/libsox_la-skelform.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-xmalloc.lo `test -f 'xmalloc.c' || echo './'`xmalloc.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-getopt.lo `test -f 'getopt.c' || echo './'`getopt.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c xmalloc.c  -fPIC -DPIC -o .libs/libsox_la-xmalloc.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c getopt.c  -fPIC -DPIC -o .libs/libsox_la-getopt.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-util.lo `test -f 'util.c' || echo './'`util.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-libsox.lo `test -f 'libsox.c' || echo './'`libsox.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-libsox_i.lo `test -f 'libsox_i.c' || echo './'`libsox_i.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c libsox.c  -fPIC -DPIC -o .libs/libsox_la-libsox.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c util.c  -fPIC -DPIC -o .libs/libsox_la-util.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c libsox_i.c  -fPIC -DPIC -o .libs/libsox_la-libsox_i.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-sox-fmt.lo `test -f 'sox-fmt.c' || echo './'`sox-fmt.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-bend.lo `test -f 'bend.c' || echo './'`bend.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-biquad.lo `test -f 'biquad.c' || echo './'`biquad.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c sox-fmt.c  -fPIC -DPIC -o .libs/libsox_la-sox-fmt.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c bend.c  -fPIC -DPIC -o .libs/libsox_la-bend.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c biquad.c  -fPIC -DPIC -o .libs/libsox_la-biquad.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-biquads.lo `test -f 'biquads.c' || echo './'`biquads.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-chorus.lo `test -f 'chorus.c' || echo './'`chorus.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c biquads.c  -fPIC -DPIC -o .libs/libsox_la-biquads.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-compand.lo `test -f 'compand.c' || echo './'`compand.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c chorus.c  -fPIC -DPIC -o .libs/libsox_la-chorus.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-compandt.lo `test -f 'compandt.c' || echo './'`compandt.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c compand.c  -fPIC -DPIC -o .libs/libsox_la-compand.o
+chorus.c:262:23: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+  262 |                 out = SOX_24BIT_CLIP_COUNT((sox_sample_t) d_out, effp->clips);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1024:39: note: expanded from macro 'SOX_24BIT_CLIP_COUNT'
+ 1024 | #define SOX_24BIT_CLIP_COUNT(i,clips) SOX_INTEGER_CLIP_COUNT(24,i,clips)
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1004:11: note: expanded from macro 'SOX_INTEGER_CLIP_COUNT'
+ 1004 |   (i) <-1 << ((bits)-1)    ? ++(clips),-1 << ((bits)-1) : (i))
+      |        ~~ ^
+chorus.c:262:23: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+  262 |                 out = SOX_24BIT_CLIP_COUNT((sox_sample_t) d_out, effp->clips);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1024:39: note: expanded from macro 'SOX_24BIT_CLIP_COUNT'
+ 1024 | #define SOX_24BIT_CLIP_COUNT(i,clips) SOX_INTEGER_CLIP_COUNT(24,i,clips)
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1004:43: note: expanded from macro 'SOX_INTEGER_CLIP_COUNT'
+ 1004 |   (i) <-1 << ((bits)-1)    ? ++(clips),-1 << ((bits)-1) : (i))
+      |                                        ~~ ^
+chorus.c:299:23: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+  299 |                 out = SOX_24BIT_CLIP_COUNT((sox_sample_t) d_out, effp->clips);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1024:39: note: expanded from macro 'SOX_24BIT_CLIP_COUNT'
+ 1024 | #define SOX_24BIT_CLIP_COUNT(i,clips) SOX_INTEGER_CLIP_COUNT(24,i,clips)
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1004:11: note: expanded from macro 'SOX_INTEGER_CLIP_COUNT'
+ 1004 |   (i) <-1 << ((bits)-1)    ? ++(clips),-1 << ((bits)-1) : (i))
+      |        ~~ ^
+chorus.c:299:23: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+  299 |                 out = SOX_24BIT_CLIP_COUNT((sox_sample_t) d_out, effp->clips);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1024:39: note: expanded from macro 'SOX_24BIT_CLIP_COUNT'
+ 1024 | #define SOX_24BIT_CLIP_COUNT(i,clips) SOX_INTEGER_CLIP_COUNT(24,i,clips)
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1004:43: note: expanded from macro 'SOX_INTEGER_CLIP_COUNT'
+ 1004 |   (i) <-1 << ((bits)-1)    ? ++(clips),-1 << ((bits)-1) : (i))
+      |                                        ~~ ^
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c compandt.c  -fPIC -DPIC -o .libs/libsox_la-compandt.o
+4 warnings generated.
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-contrast.lo `test -f 'contrast.c' || echo './'`contrast.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-dcshift.lo `test -f 'dcshift.c' || echo './'`dcshift.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c contrast.c  -fPIC -DPIC -o .libs/libsox_la-contrast.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c dcshift.c  -fPIC -DPIC -o .libs/libsox_la-dcshift.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-delay.lo `test -f 'delay.c' || echo './'`delay.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-dft_filter.lo `test -f 'dft_filter.c' || echo './'`dft_filter.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c delay.c  -fPIC -DPIC -o .libs/libsox_la-delay.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-dither.lo `test -f 'dither.c' || echo './'`dither.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-divide.lo `test -f 'divide.c' || echo './'`divide.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c dft_filter.c  -fPIC -DPIC -o .libs/libsox_la-dft_filter.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c dither.c  -fPIC -DPIC -o .libs/libsox_la-dither.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c divide.c  -fPIC -DPIC -o .libs/libsox_la-divide.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-downsample.lo `test -f 'downsample.c' || echo './'`downsample.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-earwax.lo `test -f 'earwax.c' || echo './'`earwax.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c downsample.c  -fPIC -DPIC -o .libs/libsox_la-downsample.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-echo.lo `test -f 'echo.c' || echo './'`echo.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c earwax.c  -fPIC -DPIC -o .libs/libsox_la-earwax.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c echo.c  -fPIC -DPIC -o .libs/libsox_la-echo.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-echos.lo `test -f 'echos.c' || echo './'`echos.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-effects.lo `test -f 'effects.c' || echo './'`effects.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-effects_i.lo `test -f 'effects_i.c' || echo './'`effects_i.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c echos.c  -fPIC -DPIC -o .libs/libsox_la-echos.o
+echo.c:191:23: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+  191 |                 out = SOX_24BIT_CLIP_COUNT((sox_sample_t) d_out, effp->clips);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1024:39: note: expanded from macro 'SOX_24BIT_CLIP_COUNT'
+ 1024 | #define SOX_24BIT_CLIP_COUNT(i,clips) SOX_INTEGER_CLIP_COUNT(24,i,clips)
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1004:11: note: expanded from macro 'SOX_INTEGER_CLIP_COUNT'
+ 1004 |   (i) <-1 << ((bits)-1)    ? ++(clips),-1 << ((bits)-1) : (i))
+      |        ~~ ^
+echo.c:191:23: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+  191 |                 out = SOX_24BIT_CLIP_COUNT((sox_sample_t) d_out, effp->clips);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1024:39: note: expanded from macro 'SOX_24BIT_CLIP_COUNT'
+ 1024 | #define SOX_24BIT_CLIP_COUNT(i,clips) SOX_INTEGER_CLIP_COUNT(24,i,clips)
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1004:43: note: expanded from macro 'SOX_INTEGER_CLIP_COUNT'
+ 1004 |   (i) <-1 << ((bits)-1)    ? ++(clips),-1 << ((bits)-1) : (i))
+      |                                        ~~ ^
+echo.c:225:23: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+  225 |                 out = SOX_24BIT_CLIP_COUNT((sox_sample_t) d_out, effp->clips);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1024:39: note: expanded from macro 'SOX_24BIT_CLIP_COUNT'
+ 1024 | #define SOX_24BIT_CLIP_COUNT(i,clips) SOX_INTEGER_CLIP_COUNT(24,i,clips)
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1004:11: note: expanded from macro 'SOX_INTEGER_CLIP_COUNT'
+ 1004 |   (i) <-1 << ((bits)-1)    ? ++(clips),-1 << ((bits)-1) : (i))
+      |        ~~ ^
+echo.c:225:23: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+  225 |                 out = SOX_24BIT_CLIP_COUNT((sox_sample_t) d_out, effp->clips);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1024:39: note: expanded from macro 'SOX_24BIT_CLIP_COUNT'
+ 1024 | #define SOX_24BIT_CLIP_COUNT(i,clips) SOX_INTEGER_CLIP_COUNT(24,i,clips)
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1004:43: note: expanded from macro 'SOX_INTEGER_CLIP_COUNT'
+ 1004 |   (i) <-1 << ((bits)-1)    ? ++(clips),-1 << ((bits)-1) : (i))
+      |                                        ~~ ^
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c effects.c  -fPIC -DPIC -o .libs/libsox_la-effects.o
+4 warnings generated.
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c effects_i.c  -fPIC -DPIC -o .libs/libsox_la-effects_i.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-effects_i_dsp.lo `test -f 'effects_i_dsp.c' || echo './'`effects_i_dsp.c
+echos.c:186:23: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+  186 |                 out = SOX_24BIT_CLIP_COUNT((sox_sample_t) d_out, effp->clips);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1024:39: note: expanded from macro 'SOX_24BIT_CLIP_COUNT'
+ 1024 | #define SOX_24BIT_CLIP_COUNT(i,clips) SOX_INTEGER_CLIP_COUNT(24,i,clips)
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1004:11: note: expanded from macro 'SOX_INTEGER_CLIP_COUNT'
+ 1004 |   (i) <-1 << ((bits)-1)    ? ++(clips),-1 << ((bits)-1) : (i))
+      |        ~~ ^
+echos.c:186:23: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+  186 |                 out = SOX_24BIT_CLIP_COUNT((sox_sample_t) d_out, effp->clips);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1024:39: note: expanded from macro 'SOX_24BIT_CLIP_COUNT'
+ 1024 | #define SOX_24BIT_CLIP_COUNT(i,clips) SOX_INTEGER_CLIP_COUNT(24,i,clips)
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1004:43: note: expanded from macro 'SOX_INTEGER_CLIP_COUNT'
+ 1004 |   (i) <-1 << ((bits)-1)    ? ++(clips),-1 << ((bits)-1) : (i))
+      |                                        ~~ ^
+echos.c:226:23: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+  226 |                 out = SOX_24BIT_CLIP_COUNT((sox_sample_t) d_out, effp->clips);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1024:39: note: expanded from macro 'SOX_24BIT_CLIP_COUNT'
+ 1024 | #define SOX_24BIT_CLIP_COUNT(i,clips) SOX_INTEGER_CLIP_COUNT(24,i,clips)
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1004:11: note: expanded from macro 'SOX_INTEGER_CLIP_COUNT'
+ 1004 |   (i) <-1 << ((bits)-1)    ? ++(clips),-1 << ((bits)-1) : (i))
+      |        ~~ ^
+echos.c:226:23: warning: shifting a negative signed value is undefined [-Wshift-negative-value]
+  226 |                 out = SOX_24BIT_CLIP_COUNT((sox_sample_t) d_out, effp->clips);
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1024:39: note: expanded from macro 'SOX_24BIT_CLIP_COUNT'
+ 1024 | #define SOX_24BIT_CLIP_COUNT(i,clips) SOX_INTEGER_CLIP_COUNT(24,i,clips)
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:1004:43: note: expanded from macro 'SOX_INTEGER_CLIP_COUNT'
+ 1004 |   (i) <-1 << ((bits)-1)    ? ++(clips),-1 << ((bits)-1) : (i))
+      |                                        ~~ ^
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c effects_i_dsp.c  -fPIC -DPIC -o .libs/libsox_la-effects_i_dsp.o
+4 warnings generated.
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-fade.lo `test -f 'fade.c' || echo './'`fade.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c fade.c  -fPIC -DPIC -o .libs/libsox_la-fade.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-fft4g.lo `test -f 'fft4g.c' || echo './'`fft4g.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c fft4g.c  -fPIC -DPIC -o .libs/libsox_la-fft4g.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-fir.lo `test -f 'fir.c' || echo './'`fir.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c fir.c  -fPIC -DPIC -o .libs/libsox_la-fir.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-firfit.lo `test -f 'firfit.c' || echo './'`firfit.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-flanger.lo `test -f 'flanger.c' || echo './'`flanger.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c firfit.c  -fPIC -DPIC -o .libs/libsox_la-firfit.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c flanger.c  -fPIC -DPIC -o .libs/libsox_la-flanger.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-gain.lo `test -f 'gain.c' || echo './'`gain.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c gain.c  -fPIC -DPIC -o .libs/libsox_la-gain.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-hilbert.lo `test -f 'hilbert.c' || echo './'`hilbert.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-input.lo `test -f 'input.c' || echo './'`input.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-ladspa.lo `test -f 'ladspa.c' || echo './'`ladspa.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c hilbert.c  -fPIC -DPIC -o .libs/libsox_la-hilbert.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c input.c  -fPIC -DPIC -o .libs/libsox_la-input.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c ladspa.c  -fPIC -DPIC -o .libs/libsox_la-ladspa.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-loudness.lo `test -f 'loudness.c' || echo './'`loudness.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-mcompand.lo `test -f 'mcompand.c' || echo './'`mcompand.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-noiseprof.lo `test -f 'noiseprof.c' || echo './'`noiseprof.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-noisered.lo `test -f 'noisered.c' || echo './'`noisered.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c loudness.c  -fPIC -DPIC -o .libs/libsox_la-loudness.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c mcompand.c  -fPIC -DPIC -o .libs/libsox_la-mcompand.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c noiseprof.c  -fPIC -DPIC -o .libs/libsox_la-noiseprof.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c noisered.c  -fPIC -DPIC -o .libs/libsox_la-noisered.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-output.lo `test -f 'output.c' || echo './'`output.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-overdrive.lo `test -f 'overdrive.c' || echo './'`overdrive.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c output.c  -fPIC -DPIC -o .libs/libsox_la-output.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-pad.lo `test -f 'pad.c' || echo './'`pad.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c overdrive.c  -fPIC -DPIC -o .libs/libsox_la-overdrive.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-phaser.lo `test -f 'phaser.c' || echo './'`phaser.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c pad.c  -fPIC -DPIC -o .libs/libsox_la-pad.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-rate.lo `test -f 'rate.c' || echo './'`rate.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c phaser.c  -fPIC -DPIC -o .libs/libsox_la-phaser.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-remix.lo `test -f 'remix.c' || echo './'`remix.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c rate.c  -fPIC -DPIC -o .libs/libsox_la-rate.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-repeat.lo `test -f 'repeat.c' || echo './'`repeat.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c remix.c  -fPIC -DPIC -o .libs/libsox_la-remix.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-reverb.lo `test -f 'reverb.c' || echo './'`reverb.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c repeat.c  -fPIC -DPIC -o .libs/libsox_la-repeat.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c reverb.c  -fPIC -DPIC -o .libs/libsox_la-reverb.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-reverse.lo `test -f 'reverse.c' || echo './'`reverse.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-silence.lo `test -f 'silence.c' || echo './'`silence.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c reverse.c  -fPIC -DPIC -o .libs/libsox_la-reverse.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c silence.c  -fPIC -DPIC -o .libs/libsox_la-silence.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-sinc.lo `test -f 'sinc.c' || echo './'`sinc.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-skeleff.lo `test -f 'skeleff.c' || echo './'`skeleff.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c sinc.c  -fPIC -DPIC -o .libs/libsox_la-sinc.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c skeleff.c  -fPIC -DPIC -o .libs/libsox_la-skeleff.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-speed.lo `test -f 'speed.c' || echo './'`speed.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c speed.c  -fPIC -DPIC -o .libs/libsox_la-speed.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-splice.lo `test -f 'splice.c' || echo './'`splice.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-stat.lo `test -f 'stat.c' || echo './'`stat.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-stats.lo `test -f 'stats.c' || echo './'`stats.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c splice.c  -fPIC -DPIC -o .libs/libsox_la-splice.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-stretch.lo `test -f 'stretch.c' || echo './'`stretch.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c stat.c  -fPIC -DPIC -o .libs/libsox_la-stat.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c stats.c  -fPIC -DPIC -o .libs/libsox_la-stats.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c stretch.c  -fPIC -DPIC -o .libs/libsox_la-stretch.o
+stats.c:163:77: warning: variable 'sigma_x' set but not used [-Wunused-but-set-variable]
+  163 |     double min_runs = 0, max_count = 0, min = 2, max = -2, max_sigma_x = 0, sigma_x = 0, sigma_x2 = 0, min_sigma...
+      |                                                                             ^
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-swap.lo `test -f 'swap.c' || echo './'`swap.c
+stretch.c:244:9: warning: implicit conversion from 'sox_sample_t' (aka 'int') to 'float' changes value from 2147483647
+      to 2147483648 [-Wimplicit-const-int-float-conversion]
+  244 |         SOX_SAMPLE_CLIP_COUNT(f, effp->clips);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:975:16: note: expanded from macro 'SOX_SAMPLE_CLIP_COUNT'
+  975 |     if (samp > SOX_SAMPLE_MAX) \
+      |              ~ ^~~~~~~~~~~~~~
+./sox.h:690:24: note: expanded from macro 'SOX_SAMPLE_MAX'
+  690 | #define SOX_SAMPLE_MAX (sox_sample_t)SOX_INT_MAX(32)
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stretch.c:244:9: warning: implicit conversion from 'sox_sample_t' (aka 'int') to 'float' changes value from 2147483647
+      to 2147483648 [-Wimplicit-const-int-float-conversion]
+  244 |         SOX_SAMPLE_CLIP_COUNT(f, effp->clips);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:976:16: note: expanded from macro 'SOX_SAMPLE_CLIP_COUNT'
+  976 |       { samp = SOX_SAMPLE_MAX; clips++; } \
+      |              ~ ^~~~~~~~~~~~~~
+./sox.h:690:24: note: expanded from macro 'SOX_SAMPLE_MAX'
+  690 | #define SOX_SAMPLE_MAX (sox_sample_t)SOX_INT_MAX(32)
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stretch.c:292:5: warning: implicit conversion from 'sox_sample_t' (aka 'int') to 'float' changes value from 2147483647
+      to 2147483648 [-Wimplicit-const-int-float-conversion]
+  292 |     SOX_SAMPLE_CLIP_COUNT(f, effp->clips);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:975:16: note: expanded from macro 'SOX_SAMPLE_CLIP_COUNT'
+  975 |     if (samp > SOX_SAMPLE_MAX) \
+      |              ~ ^~~~~~~~~~~~~~
+./sox.h:690:24: note: expanded from macro 'SOX_SAMPLE_MAX'
+  690 | #define SOX_SAMPLE_MAX (sox_sample_t)SOX_INT_MAX(32)
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+stretch.c:292:5: warning: implicit conversion from 'sox_sample_t' (aka 'int') to 'float' changes value from 2147483647
+      to 2147483648 [-Wimplicit-const-int-float-conversion]
+  292 |     SOX_SAMPLE_CLIP_COUNT(f, effp->clips);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./sox.h:976:16: note: expanded from macro 'SOX_SAMPLE_CLIP_COUNT'
+  976 |       { samp = SOX_SAMPLE_MAX; clips++; } \
+      |              ~ ^~~~~~~~~~~~~~
+./sox.h:690:24: note: expanded from macro 'SOX_SAMPLE_MAX'
+  690 | #define SOX_SAMPLE_MAX (sox_sample_t)SOX_INT_MAX(32)
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-synth.lo `test -f 'synth.c' || echo './'`synth.c
+1 warning generated.
+4 warnings generated.
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-tempo.lo `test -f 'tempo.c' || echo './'`tempo.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c swap.c  -fPIC -DPIC -o .libs/libsox_la-swap.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-tremolo.lo `test -f 'tremolo.c' || echo './'`tremolo.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c synth.c  -fPIC -DPIC -o .libs/libsox_la-synth.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c tempo.c  -fPIC -DPIC -o .libs/libsox_la-tempo.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c tremolo.c  -fPIC -DPIC -o .libs/libsox_la-tremolo.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-trim.lo `test -f 'trim.c' || echo './'`trim.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-upsample.lo `test -f 'upsample.c' || echo './'`upsample.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-vad.lo `test -f 'vad.c' || echo './'`vad.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c trim.c  -fPIC -DPIC -o .libs/libsox_la-trim.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c upsample.c  -fPIC -DPIC -o .libs/libsox_la-upsample.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-vol.lo `test -f 'vol.c' || echo './'`vol.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c vad.c  -fPIC -DPIC -o .libs/libsox_la-vad.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c vol.c  -fPIC -DPIC -o .libs/libsox_la-vol.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-spectrogram.lo `test -f 'spectrogram.c' || echo './'`spectrogram.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-raw-fmt.lo `test -f 'raw-fmt.c' || echo './'`raw-fmt.c
+vad.c:238:26: warning: using the result of an assignment as a condition without parentheses [-Wparentheses]
+  238 |         if (hasTriggered |= c->meanMeas >= p->triggerLevel) {
+      |             ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+vad.c:238:26: note: place parentheses around the assignment to silence this warning
+  238 |         if (hasTriggered |= c->meanMeas >= p->triggerLevel) {
+      |                          ^                                
+      |             (                                             )
+vad.c:238:26: note: use '!=' to turn this compound assignment into an inequality comparison
+  238 |         if (hasTriggered |= c->meanMeas >= p->triggerLevel) {
+      |                          ^~
+      |                          !=
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c spectrogram.c  -fPIC -DPIC -o .libs/libsox_la-spectrogram.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c raw-fmt.c  -fPIC -DPIC -o .libs/libsox_la-raw-fmt.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-s1-fmt.lo `test -f 's1-fmt.c' || echo './'`s1-fmt.c
+1 warning generated.
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-s2-fmt.lo `test -f 's2-fmt.c' || echo './'`s2-fmt.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-s3-fmt.lo `test -f 's3-fmt.c' || echo './'`s3-fmt.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c s1-fmt.c  -fPIC -DPIC -o .libs/libsox_la-s1-fmt.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c s2-fmt.c  -fPIC -DPIC -o .libs/libsox_la-s2-fmt.o
+spectrogram.c:763:27: warning: adding 'int' to a string does not append to the string [-Wstring-plus-int]
+  763 |   *prefix = "pnum-kMGTPE" + prefix_num + (prefix_num? 4 : 11);
+      |             ~~~~~~~~~~~~~~^~~~~~~~~~~~
+spectrogram.c:763:27: note: use array indexing to silence this warning
+  763 |   *prefix = "pnum-kMGTPE" + prefix_num + (prefix_num? 4 : 11);
+      |                           ^
+      |             &             [           ]
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c s3-fmt.c  -fPIC -DPIC -o .libs/libsox_la-s3-fmt.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-s4-fmt.lo `test -f 's4-fmt.c' || echo './'`s4-fmt.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-u1-fmt.lo `test -f 'u1-fmt.c' || echo './'`u1-fmt.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-u2-fmt.lo `test -f 'u2-fmt.c' || echo './'`u2-fmt.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c s4-fmt.c  -fPIC -DPIC -o .libs/libsox_la-s4-fmt.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c u1-fmt.c  -fPIC -DPIC -o .libs/libsox_la-u1-fmt.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c u2-fmt.c  -fPIC -DPIC -o .libs/libsox_la-u2-fmt.o
+1 warning generated.
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-u3-fmt.lo `test -f 'u3-fmt.c' || echo './'`u3-fmt.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-u4-fmt.lo `test -f 'u4-fmt.c' || echo './'`u4-fmt.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-al-fmt.lo `test -f 'al-fmt.c' || echo './'`al-fmt.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-la-fmt.lo `test -f 'la-fmt.c' || echo './'`la-fmt.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c u3-fmt.c  -fPIC -DPIC -o .libs/libsox_la-u3-fmt.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c u4-fmt.c  -fPIC -DPIC -o .libs/libsox_la-u4-fmt.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c al-fmt.c  -fPIC -DPIC -o .libs/libsox_la-al-fmt.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c la-fmt.c  -fPIC -DPIC -o .libs/libsox_la-la-fmt.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-ul-fmt.lo `test -f 'ul-fmt.c' || echo './'`ul-fmt.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-lu-fmt.lo `test -f 'lu-fmt.c' || echo './'`lu-fmt.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-8svx.lo `test -f '8svx.c' || echo './'`8svx.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-aiff-fmt.lo `test -f 'aiff-fmt.c' || echo './'`aiff-fmt.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c ul-fmt.c  -fPIC -DPIC -o .libs/libsox_la-ul-fmt.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c lu-fmt.c  -fPIC -DPIC -o .libs/libsox_la-lu-fmt.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c 8svx.c  -fPIC -DPIC -o .libs/libsox_la-8svx.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c aiff-fmt.c  -fPIC -DPIC -o .libs/libsox_la-aiff-fmt.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-aifc-fmt.lo `test -f 'aifc-fmt.c' || echo './'`aifc-fmt.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-au.lo `test -f 'au.c' || echo './'`au.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-avr.lo `test -f 'avr.c' || echo './'`avr.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-cdr.lo `test -f 'cdr.c' || echo './'`cdr.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c aifc-fmt.c  -fPIC -DPIC -o .libs/libsox_la-aifc-fmt.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c au.c  -fPIC -DPIC -o .libs/libsox_la-au.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c avr.c  -fPIC -DPIC -o .libs/libsox_la-avr.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c cdr.c  -fPIC -DPIC -o .libs/libsox_la-cdr.o
+au.c:146:38: warning: implicit conversion from enumeration type 'sox_bool' (aka 'enum sox_bool') to different
+      enumeration type 'sox_option_t' (aka 'enum sox_option_t') [-Wenum-conversion]
+  146 |   ft->encoding.reverse_bytes = id[i].reverse_bytes;
+      |                              ~ ~~~~~~^~~~~~~~~~~~~
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-cvsd-fmt.lo `test -f 'cvsd-fmt.c' || echo './'`cvsd-fmt.c
+1 warning generated.
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-dvms-fmt.lo `test -f 'dvms-fmt.c' || echo './'`dvms-fmt.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-dat.lo `test -f 'dat.c' || echo './'`dat.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-hcom.lo `test -f 'hcom.c' || echo './'`hcom.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c cvsd-fmt.c  -fPIC -DPIC -o .libs/libsox_la-cvsd-fmt.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c dvms-fmt.c  -fPIC -DPIC -o .libs/libsox_la-dvms-fmt.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c dat.c  -fPIC -DPIC -o .libs/libsox_la-dat.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c hcom.c  -fPIC -DPIC -o .libs/libsox_la-hcom.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-htk.lo `test -f 'htk.c' || echo './'`htk.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-maud.lo `test -f 'maud.c' || echo './'`maud.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-prc.lo `test -f 'prc.c' || echo './'`prc.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c htk.c  -fPIC -DPIC -o .libs/libsox_la-htk.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c maud.c  -fPIC -DPIC -o .libs/libsox_la-maud.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c prc.c  -fPIC -DPIC -o .libs/libsox_la-prc.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-sf.lo `test -f 'sf.c' || echo './'`sf.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-smp.lo `test -f 'smp.c' || echo './'`smp.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-sounder.lo `test -f 'sounder.c' || echo './'`sounder.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c sf.c  -fPIC -DPIC -o .libs/libsox_la-sf.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c smp.c  -fPIC -DPIC -o .libs/libsox_la-smp.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-soundtool.lo `test -f 'soundtool.c' || echo './'`soundtool.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c sounder.c  -fPIC -DPIC -o .libs/libsox_la-sounder.o
+sf.c:88:38: warning: implicit conversion from enumeration type 'sox_bool' (aka 'enum sox_bool') to different enumeration
+      type 'sox_option_t' (aka 'enum sox_option_t') [-Wenum-conversion]
+   88 |   ft->encoding.reverse_bytes = id[i].reverse_bytes;
+      |                              ~ ~~~~~~^~~~~~~~~~~~~
+1 warning generated.
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c soundtool.c  -fPIC -DPIC -o .libs/libsox_la-soundtool.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-sphere.lo `test -f 'sphere.c' || echo './'`sphere.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-tx16w.lo `test -f 'tx16w.c' || echo './'`tx16w.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c sphere.c  -fPIC -DPIC -o .libs/libsox_la-sphere.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-voc.lo `test -f 'voc.c' || echo './'`voc.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c tx16w.c  -fPIC -DPIC -o .libs/libsox_la-tx16w.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-vox-fmt.lo `test -f 'vox-fmt.c' || echo './'`vox-fmt.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c voc.c  -fPIC -DPIC -o .libs/libsox_la-voc.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c vox-fmt.c  -fPIC -DPIC -o .libs/libsox_la-vox-fmt.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-ima-fmt.lo `test -f 'ima-fmt.c' || echo './'`ima-fmt.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-adpcm.lo `test -f 'adpcm.c' || echo './'`adpcm.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c ima-fmt.c  -fPIC -DPIC -o .libs/libsox_la-ima-fmt.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-ima_rw.lo `test -f 'ima_rw.c' || echo './'`ima_rw.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c adpcm.c  -fPIC -DPIC -o .libs/libsox_la-adpcm.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-wav.lo `test -f 'wav.c' || echo './'`wav.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c ima_rw.c  -fPIC -DPIC -o .libs/libsox_la-ima_rw.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c wav.c  -fPIC -DPIC -o .libs/libsox_la-wav.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-wve.lo `test -f 'wve.c' || echo './'`wve.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c wve.c  -fPIC -DPIC -o .libs/libsox_la-wve.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-xa.lo `test -f 'xa.c' || echo './'`xa.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-nulfile.lo `test -f 'nulfile.c' || echo './'`nulfile.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c xa.c  -fPIC -DPIC -o .libs/libsox_la-xa.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-f4-fmt.lo `test -f 'f4-fmt.c' || echo './'`f4-fmt.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c nulfile.c  -fPIC -DPIC -o .libs/libsox_la-nulfile.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c f4-fmt.c  -fPIC -DPIC -o .libs/libsox_la-f4-fmt.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-f8-fmt.lo `test -f 'f8-fmt.c' || echo './'`f8-fmt.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-gsrt.lo `test -f 'gsrt.c' || echo './'`gsrt.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-id3.lo `test -f 'id3.c' || echo './'`id3.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-alsa.lo `test -f 'alsa.c' || echo './'`alsa.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c f8-fmt.c  -fPIC -DPIC -o .libs/libsox_la-f8-fmt.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c gsrt.c  -fPIC -DPIC -o .libs/libsox_la-gsrt.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c id3.c  -fPIC -DPIC -o .libs/libsox_la-id3.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c alsa.c  -fPIC -DPIC -o .libs/libsox_la-alsa.o
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-flac.lo `test -f 'flac.c' || echo './'`flac.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-pulseaudio.lo `test -f 'pulseaudio.c' || echo './'`pulseaudio.c
+/bin/sh ../libtool  --tag=CC   --mode=compile clang -DHAVE_CONFIG_H -I.  -DLADSPA_PATH="\"\"" -DPKGLIBDIR="\"/usr/lib64/sox\""        -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c -o libsox_la-vorbis.lo `test -f 'vorbis.c' || echo './'`vorbis.c
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c flac.c  -fPIC -DPIC -o .libs/libsox_la-flac.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c pulseaudio.c  -fPIC -DPIC -o .libs/libsox_la-pulseaudio.o
+libtool: compile:  clang -DHAVE_CONFIG_H -I. -DLADSPA_PATH=\"\" -DPKGLIBDIR=\"/usr/lib64/sox\" -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -c vorbis.c  -fPIC -DPIC -o .libs/libsox_la-vorbis.o
+/bin/sh ../libtool  --tag=CC   --mode=link clang      -march=native -mtune=native -O2 -pipe -flto=thin -fstack-protector-strong -Wall -Wmissing-prototypes -Wstrict-prototypes -fopenmp -no-undefined -version-info 3:0:0 -export-symbols ./libsox.sym -fuse-ld=lld -rtlib=compiler-rt -unwindlib=libunwind -Wl,-O2 -Wl,--as-needed -Wl,-z,relro,-z,now -o libsox.la -rpath /usr/lib64 libsox_la-adpcms.lo libsox_la-aiff.lo libsox_la-cvsd.lo libsox_la-g711.lo libsox_la-g721.lo libsox_la-g723_24.lo libsox_la-g723_40.lo libsox_la-g72x.lo libsox_la-vox.lo libsox_la-raw.lo libsox_la-formats.lo libsox_la-formats_i.lo libsox_la-skelform.lo libsox_la-xmalloc.lo libsox_la-getopt.lo libsox_la-util.lo libsox_la-libsox.lo libsox_la-libsox_i.lo libsox_la-sox-fmt.lo libsox_la-bend.lo libsox_la-biquad.lo libsox_la-biquads.lo libsox_la-chorus.lo libsox_la-compand.lo libsox_la-compandt.lo libsox_la-contrast.lo libsox_la-dcshift.lo libsox_la-delay.lo libsox_la-dft_filter.lo libsox_la-dither.lo libsox_la-divide.lo libsox_la-downsample.lo libsox_la-earwax.lo libsox_la-echo.lo libsox_la-echos.lo libsox_la-effects.lo libsox_la-effects_i.lo libsox_la-effects_i_dsp.lo libsox_la-fade.lo libsox_la-fft4g.lo libsox_la-fir.lo libsox_la-firfit.lo libsox_la-flanger.lo libsox_la-gain.lo libsox_la-hilbert.lo libsox_la-input.lo libsox_la-ladspa.lo libsox_la-loudness.lo libsox_la-mcompand.lo libsox_la-noiseprof.lo libsox_la-noisered.lo libsox_la-output.lo libsox_la-overdrive.lo libsox_la-pad.lo libsox_la-phaser.lo libsox_la-rate.lo libsox_la-remix.lo libsox_la-repeat.lo libsox_la-reverb.lo libsox_la-reverse.lo libsox_la-silence.lo libsox_la-sinc.lo libsox_la-skeleff.lo libsox_la-speed.lo libsox_la-splice.lo libsox_la-stat.lo libsox_la-stats.lo libsox_la-stretch.lo libsox_la-swap.lo libsox_la-synth.lo libsox_la-tempo.lo libsox_la-tremolo.lo libsox_la-trim.lo libsox_la-upsample.lo libsox_la-vad.lo libsox_la-vol.lo libsox_la-spectrogram.lo libsox_la-raw-fmt.lo libsox_la-s1-fmt.lo libsox_la-s2-fmt.lo libsox_la-s3-fmt.lo libsox_la-s4-fmt.lo libsox_la-u1-fmt.lo libsox_la-u2-fmt.lo libsox_la-u3-fmt.lo libsox_la-u4-fmt.lo libsox_la-al-fmt.lo libsox_la-la-fmt.lo libsox_la-ul-fmt.lo libsox_la-lu-fmt.lo libsox_la-8svx.lo libsox_la-aiff-fmt.lo libsox_la-aifc-fmt.lo libsox_la-au.lo libsox_la-avr.lo libsox_la-cdr.lo libsox_la-cvsd-fmt.lo libsox_la-dvms-fmt.lo libsox_la-dat.lo libsox_la-hcom.lo libsox_la-htk.lo libsox_la-maud.lo libsox_la-prc.lo libsox_la-sf.lo libsox_la-smp.lo libsox_la-sounder.lo libsox_la-soundtool.lo libsox_la-sphere.lo libsox_la-tx16w.lo libsox_la-voc.lo libsox_la-vox-fmt.lo libsox_la-ima-fmt.lo libsox_la-adpcm.lo libsox_la-ima_rw.lo libsox_la-wav.lo libsox_la-wve.lo libsox_la-xa.lo libsox_la-nulfile.lo libsox_la-f4-fmt.lo libsox_la-f8-fmt.lo libsox_la-gsrt.lo libsox_la-id3.lo libsox_la-alsa.lo     libsox_la-flac.lo      libsox_la-pulseaudio.lo    libsox_la-vorbis.lo   -lpng -lz     -lgsm   -lltdl    -lasound       -lFLAC     -lpulse -lpulse-simple     -logg -lvorbis -lvorbisenc -lvorbisfile   -lm 
+libtool: link: echo "{ global:" > .libs/libsox.ver
+libtool: link:  cat ./libsox.sym | /bin/sed -e "s/\(.*\)/\1;/" >> .libs/libsox.ver
+libtool: link:  echo "local: *; };" >> .libs/libsox.ver
+libtool: link:  clang -shared  -fPIC -DPIC  .libs/libsox_la-adpcms.o .libs/libsox_la-aiff.o .libs/libsox_la-cvsd.o .libs/libsox_la-g711.o .libs/libsox_la-g721.o .libs/libsox_la-g723_24.o .libs/libsox_la-g723_40.o .libs/libsox_la-g72x.o .libs/libsox_la-vox.o .libs/libsox_la-raw.o .libs/libsox_la-formats.o .libs/libsox_la-formats_i.o .libs/libsox_la-skelform.o .libs/libsox_la-xmalloc.o .libs/libsox_la-getopt.o .libs/libsox_la-util.o .libs/libsox_la-libsox.o .libs/libsox_la-libsox_i.o .libs/libsox_la-sox-fmt.o .libs/libsox_la-bend.o .libs/libsox_la-biquad.o .libs/libsox_la-biquads.o .libs/libsox_la-chorus.o .libs/libsox_la-compand.o .libs/libsox_la-compandt.o .libs/libsox_la-contrast.o .libs/libsox_la-dcshift.o .libs/libsox_la-delay.o .libs/libsox_la-dft_filter.o .libs/libsox_la-dither.o .libs/libsox_la-divide.o .libs/libsox_la-downsample.o .libs/libsox_la-earwax.o .libs/libsox_la-echo.o .libs/libsox_la-echos.o .libs/libsox_la-effects.o .libs/libsox_la-effects_i.o .libs/libsox_la-effects_i_dsp.o .libs/libsox_la-fade.o .libs/libsox_la-fft4g.o .libs/libsox_la-fir.o .libs/libsox_la-firfit.o .libs/libsox_la-flanger.o .libs/libsox_la-gain.o .libs/libsox_la-hilbert.o .libs/libsox_la-input.o .libs/libsox_la-ladspa.o .libs/libsox_la-loudness.o .libs/libsox_la-mcompand.o .libs/libsox_la-noiseprof.o .libs/libsox_la-noisered.o .libs/libsox_la-output.o .libs/libsox_la-overdrive.o .libs/libsox_la-pad.o .libs/libsox_la-phaser.o .libs/libsox_la-rate.o .libs/libsox_la-remix.o .libs/libsox_la-repeat.o .libs/libsox_la-reverb.o .libs/libsox_la-reverse.o .libs/libsox_la-silence.o .libs/libsox_la-sinc.o .libs/libsox_la-skeleff.o .libs/libsox_la-speed.o .libs/libsox_la-splice.o .libs/libsox_la-stat.o .libs/libsox_la-stats.o .libs/libsox_la-stretch.o .libs/libsox_la-swap.o .libs/libsox_la-synth.o .libs/libsox_la-tempo.o .libs/libsox_la-tremolo.o .libs/libsox_la-trim.o .libs/libsox_la-upsample.o .libs/libsox_la-vad.o .libs/libsox_la-vol.o .libs/libsox_la-spectrogram.o .libs/libsox_la-raw-fmt.o .libs/libsox_la-s1-fmt.o .libs/libsox_la-s2-fmt.o .libs/libsox_la-s3-fmt.o .libs/libsox_la-s4-fmt.o .libs/libsox_la-u1-fmt.o .libs/libsox_la-u2-fmt.o .libs/libsox_la-u3-fmt.o .libs/libsox_la-u4-fmt.o .libs/libsox_la-al-fmt.o .libs/libsox_la-la-fmt.o .libs/libsox_la-ul-fmt.o .libs/libsox_la-lu-fmt.o .libs/libsox_la-8svx.o .libs/libsox_la-aiff-fmt.o .libs/libsox_la-aifc-fmt.o .libs/libsox_la-au.o .libs/libsox_la-avr.o .libs/libsox_la-cdr.o .libs/libsox_la-cvsd-fmt.o .libs/libsox_la-dvms-fmt.o .libs/libsox_la-dat.o .libs/libsox_la-hcom.o .libs/libsox_la-htk.o .libs/libsox_la-maud.o .libs/libsox_la-prc.o .libs/libsox_la-sf.o .libs/libsox_la-smp.o .libs/libsox_la-sounder.o .libs/libsox_la-soundtool.o .libs/libsox_la-sphere.o .libs/libsox_la-tx16w.o .libs/libsox_la-voc.o .libs/libsox_la-vox-fmt.o .libs/libsox_la-ima-fmt.o .libs/libsox_la-adpcm.o .libs/libsox_la-ima_rw.o .libs/libsox_la-wav.o .libs/libsox_la-wve.o .libs/libsox_la-xa.o .libs/libsox_la-nulfile.o .libs/libsox_la-f4-fmt.o .libs/libsox_la-f8-fmt.o .libs/libsox_la-gsrt.o .libs/libsox_la-id3.o .libs/libsox_la-alsa.o .libs/libsox_la-flac.o .libs/libsox_la-pulseaudio.o .libs/libsox_la-vorbis.o   -Wl,-rpath -Wl,//usr/lib64 -Wl,--as-needed -lpng -lz -lgsm //usr/lib64/libltdl.so -lasound -lFLAC -lpulse -lpulse-simple -logg -lvorbis -lvorbisenc -lvorbisfile -lm  -march=native -mtune=native -O2 -flto=thin -fstack-protector-strong -fopenmp -fuse-ld=lld -Wl,-O2 -Wl,-z -Wl,relro -Wl,-z -Wl,now   -fopenmp -Wl,-soname -Wl,libsox.so.3 -Wl,-version-script -Wl,.libs/libsox.ver -o .libs/libsox.so.3.0.0
+ld.lld: [0;31merror: [0mversion script assignment of 'global' to symbol 'lsx_lpc10_create_decoder_state' failed: symbol not defined
+ld.lld: [0;31merror: [0mversion script assignment of 'global' to symbol 'lsx_lpc10_create_encoder_state' failed: symbol not defined
+ld.lld: [0;31merror: [0mversion script assignment of 'global' to symbol 'lsx_lpc10_decode' failed: symbol not defined
+ld.lld: [0;31merror: [0mversion script assignment of 'global' to symbol 'lsx_lpc10_encode' failed: symbol not defined
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [Makefile:1449: libsox.la] Error 1
+make[1]: Leaving directory '/var/tmp/portage/media-sound/sox-14.4.2_p20210509-r2/work/sox-code-42b3557e13e0fe01a83465b672d89faddbe65f49/src'
+make: *** [Makefile:680: all-recursive] Error 1
+ * ERROR: media-sound/sox-14.4.2_p20210509-r2::gentoo failed (compile phase):
+ *   emake failed
+ * 
+ * If you need support, post the output of `emerge --info '=media-sound/sox-14.4.2_p20210509-r2::gentoo'`,
+ * the complete build log and the output of `emerge -pqv '=media-sound/sox-14.4.2_p20210509-r2::gentoo'`.
+ * The complete build log is located at '/var/tmp/portage/media-sound/sox-14.4.2_p20210509-r2/temp/build.log'.
+ * The ebuild environment file is located at '/var/tmp/portage/media-sound/sox-14.4.2_p20210509-r2/temp/environment'.
+ * Working directory: '/var/tmp/portage/media-sound/sox-14.4.2_p20210509-r2/work/sox-code-42b3557e13e0fe01a83465b672d89faddbe65f49'
+ * S: '/var/tmp/portage/media-sound/sox-14.4.2_p20210509-r2/work/sox-code-42b3557e13e0fe01a83465b672d89faddbe65f49'

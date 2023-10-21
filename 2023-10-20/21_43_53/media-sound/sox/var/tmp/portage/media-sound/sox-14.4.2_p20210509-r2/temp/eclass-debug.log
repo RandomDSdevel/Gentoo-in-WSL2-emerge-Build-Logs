@@ -1,0 +1,16 @@
+  eclass exists: /var/db/repos/gentoo/eclass/autotools.eclass
+inherit: autotools -> /var/db/repos/gentoo/eclass/autotools.eclass
+*** Multiple Inheritance (Level: 2)
+  eclass exists: /var/db/repos/gentoo/eclass/gnuconfig.eclass
+inherit: gnuconfig -> /var/db/repos/gentoo/eclass/gnuconfig.eclass
+  eclass exists: /var/db/repos/gentoo/eclass/libtool.eclass
+inherit: libtool -> /var/db/repos/gentoo/eclass/libtool.eclass
+*** Multiple Inheritance (Level: 3)
+  eclass exists: /var/db/repos/gentoo/eclass/toolchain-funcs.eclass
+inherit: toolchain-funcs -> /var/db/repos/gentoo/eclass/toolchain-funcs.eclass
+*** Multiple Inheritance (Level: 4)
+  eclass exists: /var/db/repos/gentoo/eclass/multilib.eclass
+inherit: multilib -> /var/db/repos/gentoo/eclass/multilib.eclass
+*** Multiple Inheritance (Level: 5)
+  eclass exists: /var/db/repos/gentoo/eclass/toolchain-funcs.eclass
+inherit: toolchain-funcs -> /var/db/repos/gentoo/eclass/toolchain-funcs.eclass

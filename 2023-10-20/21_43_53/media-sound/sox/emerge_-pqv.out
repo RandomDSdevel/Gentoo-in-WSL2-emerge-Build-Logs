@@ -1,0 +1,2 @@
+… # emerge -pqv --oneshot --reinstall-atom="media-sound/sox" '=media-sound/sox-14.4.2_p20210509-r2::gentoo' 2>&1 | tee -a "$THIS_FILE"
+[ebuild   R   ] media-sound/sox-14.4.2_p20210509-r2  USE="alsa encode flac mad ogg openmp png pulseaudio -amr -ao -id3tag -ladspa -magic -opus -oss -sndfile -sndio -static-libs -twolame -wavpack" 

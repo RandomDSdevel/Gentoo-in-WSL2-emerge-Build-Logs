@@ -1,0 +1,8 @@
+***** autoconf *****
+***** PWD: /var/tmp/portage/media-sound/sox-14.4.2_p20210509-r2/work/sox-code-42b3557e13e0fe01a83465b672d89faddbe65f49
+***** autoconf --force
+
+configure.ac:44: warning: The macro `AC_HEADER_STDC' is obsolete.
+configure.ac:44: You should run autoupdate.
+./lib/autoconf/headers.m4:704: AC_HEADER_STDC is expanded from...
+configure.ac:44: the top level

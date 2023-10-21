@@ -1,0 +1,15 @@
+CC="gcc"
+CXX="g++"
+AR="gcc-ar"
+NM="gcc-nm"
+RANLIB="gcc-ranlib"
+
+COMMON_FLAGS="-march=native -mtune=native -O2 -pipe"
+CFLAGS="-flto=16 ${COMMON_FLAGS}"
+CXXFLAGS="-flto=16 ${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
+# '`-O2`' in '`LDFLAGS`' refers to binary size optimization during linking; it is _not_ related to the compiler's '`-O`' levels.  
+LDFLAGS="-fuse-ld=lld -Wl,-O2 -Wl,--as-needed -Wl,-z,relro,-z,now"
+
+USE="-clang"

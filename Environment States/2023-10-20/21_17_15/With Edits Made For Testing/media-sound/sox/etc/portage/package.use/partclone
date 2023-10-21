@@ -1,0 +1,1 @@
+sys-block/partclone apfs btrfs exfat f2fs fat fuse hfs unix nilfs2 ntfs reiser4 reiserfs xfs

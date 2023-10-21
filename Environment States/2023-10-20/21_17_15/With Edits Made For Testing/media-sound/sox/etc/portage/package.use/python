@@ -1,0 +1,3 @@
+dev-lang/python examples lto tk
+*/* PYTHON_TARGETS:  -* python3_11 python3_12
+*/* PYTHON_SINGLE_TARGET:  -* python3_11 # Bump this to `python3_12 and simplify `PYTHON_TARGETS` above to just `-* python3_12` when all ebuilds dependendt on Python have been revised to work against Python 3.12.  

@@ -1,0 +1,12 @@
+<sys-devel/llvm-17.0.0
+<sys-devel/clang-17.0.0
+<sys-libs/compiler-rt-17.0.0
+<sys-libs/compiler-rt-sanitizers-17.0.0
+<sys-devel/clang-runtime-17.0.0
+<sys-devel/lld-17.0.0
+<sys-libs/libcxx-17.0.0
+<sys-libs/libcxxabi-17.0.0
+<sys-libs/llvm-libunwind-17.0.0
+<sys-libs/libomp-17.0.0
+<dev-util/lldb-17.0.0
+<dev-libs/libclc-17.0.0
