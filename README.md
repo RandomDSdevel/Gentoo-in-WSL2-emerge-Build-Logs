@@ -1,3 +1,8 @@
+> [!NOTE]
+> This repository has now been archived.  
+
+---
+
 # Gentoo-in-WSL2-emerge-Logs
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logs from failed attempts to '`emerge`' various packages in a WSL2 Gentoo instance.  
